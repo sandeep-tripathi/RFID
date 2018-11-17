@@ -37,8 +37,13 @@ import com.example.uhf.tools.UIHelper;
 import com.lidroid.xutils.view.annotation.ViewInject;
 import com.rscja.deviceapi.RFIDWithUHF;
 
+import org.w3c.dom.Text;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 
 public class UHFReadTagFragment extends KeyDwonFragment {
@@ -370,7 +375,6 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 {
                     String strUII = mContext.mReader.inventorySingleTag();
                     if (!TextUtils.isEmpty(strUII)) {
-                        String strEPC = mContext.mReader.convertUiiToEPC(strUII);
                         addEPCToList(strEPC, "N/A");
                         tv_count.setText("" + adapter.getCount());
 
@@ -407,6 +411,17 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         dialog.show();
                         EditText editText = (EditText) dialog.findViewById(R.id.tagID);
                         editText.setText(strEPC);
+
+
+                        // 4. current date
+                        //create a date string.
+                        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+                        TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
+                        date.setText(date_n);
+
+
+
+
 
 
 
