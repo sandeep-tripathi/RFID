@@ -35,13 +35,20 @@ import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
 import com.lidroid.xutils.view.annotation.ViewInject;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.AsyncHttpResponseHandler;
+import com.loopj.android.http.RequestParams;
 import com.rscja.deviceapi.RFIDWithUHF;
 
+
+import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
+import cz.msebera.android.httpclient.Header;
+import cz.msebera.android.httpclient.entity.StringEntity;
 
 
 public class UHFReadTagFragment extends KeyDwonFragment {
@@ -411,9 +418,52 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         EditText editText = (EditText) dialog.findViewById(R.id.tagID);
                         editText.setText(strEPC);
 
-                        String date_n = new SimpleDateFormat("MMM dd, yyyy", Locale.getDefault()).format(new Date());
+                        String date_n = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
                         TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
                         date.setText(date_n);
+
+
+                        // Making HTTP request to the server
+                        AsyncHttpClient client = new AsyncHttpClient();
+
+                        RequestParams params = new RequestParams();
+                        params.put("tagids", "[\"111133B2DDD9014000000000\"]");
+                        String payload = "{\"tagids\":[\"1143243\"]}";
+                        StringEntity payloadStringEntity = null;
+                        try {
+                            payloadStringEntity = new StringEntity("{\"tagids\":[\"1143243\"]}");
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                        }
+
+                        Toast.makeText(getActivity().getApplicationContext(), "This is a message displayed in a Toast", Toast.LENGTH_SHORT).show();
+
+                        client.post(getActivity().getApplicationContext(), "http://46.101.232.21:1080/api/app1", payloadStringEntity, "application/json", new AsyncHttpResponseHandler() {
+                        // client.get("http://www.google.com", new AsyncHttpResponseHandler() {
+                            @Override
+                            public void onStart() {
+                                // called before request is started
+                                toastNotify("Starting!!!!");
+                            }
+
+                            @Override
+                            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
+                                // called when response HTTP status is "200 OK"
+                                toastNotify("Done!!!!");
+                            }
+
+                            @Override
+                            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
+                                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
+                                toastNotify("Failed!!!!");
+                            }
+
+                            @Override
+                            public void onRetry(int retryNo) {
+                                // called when request is retried
+                                toastNotify("Retrying!!!!");
+                            }
+                        });
 
 
                     } else {
@@ -522,6 +572,10 @@ public class UHFReadTagFragment extends KeyDwonFragment {
     @Override
     public void myOnKeyDwon() {
         readTag();
+    }
+
+    public void toastNotify(String toastMessage) {
+        Toast.makeText(getActivity().getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
     }
 
 }

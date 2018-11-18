@@ -37,4 +37,5 @@ dependencies {
     compile 'com.android.support:support-v4:18.0.0'
     compile files('libs/jxl.jar')
     compile files('libs/cw-deviceapi20180918.jar')
+    compile 'com.loopj.android:android-async-http:1.4.9'
 }
