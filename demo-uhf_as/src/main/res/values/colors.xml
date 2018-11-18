@@ -22,7 +22,7 @@
     <color name="green1">#22008000</color>
     <color name="green2">#88008000</color>
     <color name="green3">#aa008000</color>
-    <color name="blue">#0000FF</color>
+    <color name="blue">#00ffae</color>
     <color name="blue1">#2095ac</color>
     <color name="blue2">#2398bc</color>
     <color name="purple">#800080</color>
@@ -57,7 +57,7 @@
     <color name="help_view">#ff404040</color>
     <color name="possible_result_points">#c0ffff00</color>
     <color name="result_image_border">#ffffffff</color>
-    <color name="result_minor_text">#ffc0c0c0</color>
+    <color name="result_minor_text">#17c0c0c0</color>
     <color name="result_points">#c000ff00</color>
     <color name="result_text">#ffffffff</color>
     <color name="result_view">#b0000000</color>

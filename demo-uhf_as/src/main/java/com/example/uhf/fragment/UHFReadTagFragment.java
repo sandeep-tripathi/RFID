@@ -423,6 +423,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         date.setText(date_n);
 
 
+
                         // Making HTTP request to the server
                         AsyncHttpClient client = new AsyncHttpClient();
 

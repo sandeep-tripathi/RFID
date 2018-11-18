@@ -5,10 +5,11 @@
     android:id="@+id/xrayImage"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:clickable="false"
     android:orientation="vertical">
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/logo"
         android:layout_width="38dp"
         android:layout_height="31dp"
         android:layout_gravity="right"
@@ -20,23 +21,37 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:paddingLeft="5dp"
-        android:paddingTop="7dp"
-        android:paddingBottom="7dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
         android:src="@android:drawable/checkbox_on_background"
         android:text="RFID Information System"
         android:textSize="24sp"
         android:textStyle="bold"
         tools:src="@drawable/ovgu" />
-
     <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="17dp"
+        android:paddingTop="12dp"
+        android:text="Current Date"
+        android:textSize="18sp"/>
+
+    <EditText
         android:id="@+id/currentDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:clickable="false"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginRight="4dp"
+        android:layout_marginBottom="4dp"
+        android:hint="Current date"
         android:paddingLeft="17dp"
-        android:text="Date: 16/11/2018"
-        android:textSize="18sp"
-        tools:clickable="false" />
+        android:text=" currentDate"
+        android:textColor="@color/red1"
+        android:textIsSelectable="true"
+        android:textSize="18sp" />
+
 
     <EditText
         android:id="@+id/username"
@@ -49,7 +64,17 @@
         android:hint="Username"
         android:inputType="textEmailAddress"
         android:paddingLeft="17dp"
-        android:paddingTop="17dp" />
+        android:paddingTop="10dp"
+        android:textColor="@color/red1"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="17dp"
+        android:paddingTop="12dp"
+        android:text="Tag ID"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/tagID"
@@ -63,9 +88,10 @@
         android:cursorVisible="false"
         android:fontFamily="sans-serif"
         android:hint="Tag ID"
-        android:inputType="none"
-        android:paddingLeft="17dp"
-        android:paddingTop="17dp"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:textColor="@color/red1"
         android:textIsSelectable="true" />
 
     <TextView
@@ -73,7 +99,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="17dp"
-        android:paddingTop="17dp"
+        android:paddingTop="12dp"
         android:text="Choose status of Equipment"
         android:textSize="18sp" />
 
@@ -81,6 +107,7 @@
         android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/button_bg_up"
         android:entries="@array/equipment_status_arrays"
         android:paddingLeft="17dp"
         android:paddingTop="17dp"
@@ -103,7 +130,9 @@
         android:inputType="date"
         android:paddingLeft="17dp"
         android:paddingTop="17dp"
-        android:text="15/12/2018" />
+        android:text="15/12/2018"
+        android:textColor="@color/red1"
+        android:textIsSelectable="true"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -138,12 +167,6 @@
         android:layout_height="wrap_content"
         android:src="@drawable/button_bg" />
 
-    <!--<ImageView-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="64dp"-->
-    <!--android:background="#FFFFBB33"-->
-    <!--android:contentDescription="@string/app_name"-->
-    <!--android:scaleType="center"-->
-    <!--android:src="@drawable/close" />-->
+
 
 </LinearLayout>

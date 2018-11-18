@@ -1432,7 +1432,7 @@
 
     <string name="equipment_status_prompt">Choose a status</string>
     <string-array name="equipment_status_arrays">
-        <item>New</item>
+        <item>New/Functional</item>
         <item>Malfunctional</item>
         <item>Defective</item>
     </string-array>
