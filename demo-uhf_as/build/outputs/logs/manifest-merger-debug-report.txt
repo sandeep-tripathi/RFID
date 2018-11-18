@@ -46,7 +46,7 @@ ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml
 application
 ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:10:5-27:19
 	android:label
-		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:13:9-37
 	android:icon
 		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:12:9-45
 	android:allowBackup
@@ -58,7 +58,7 @@ ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml
 	android:screenOrientation
 		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:17:13-49
 	android:label
-		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:18:13-45
+		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:18:13-41
 	android:name
 		ADDED from /home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/AndroidManifest.xml:16:13-68
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER

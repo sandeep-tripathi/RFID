@@ -436,7 +436,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                             e.printStackTrace();
                         }
 
-                        Toast.makeText(getActivity().getApplicationContext(), "This is a message displayed in a Toast", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getActivity().getApplicationContext(), "Welcome to RFID-UHF APP", Toast.LENGTH_SHORT).show();
 
                         client.post(getActivity().getApplicationContext(), "http://46.101.232.21:1080/api/app1", payloadStringEntity, "application/json", new AsyncHttpResponseHandler() {
                         // client.get("http://www.google.com", new AsyncHttpResponseHandler() {
