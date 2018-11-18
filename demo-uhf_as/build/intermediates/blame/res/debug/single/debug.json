@@ -172,6 +172,10 @@
         "source": "/home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/res/layout/activity_uhfset.xml"
     },
     {
+        "merged": "/home/rabikumar/Desktop/RFID/demo-uhf_as/build/intermediates/res/merged/debug/drawable_crackapron.png.flat",
+        "source": "/home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/res/drawable/crackapron.png"
+    },
+    {
         "merged": "/home/rabikumar/Desktop/RFID/demo-uhf_as/build/intermediates/res/merged/debug/anim_slide_left_in.xml.flat",
         "source": "/home/rabikumar/Desktop/RFID/demo-uhf_as/src/main/res/anim/slide_left_in.xml"
     },

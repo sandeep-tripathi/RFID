@@ -399,13 +399,13 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         // Pass null as the parent view because its going in the dialog layout
                         builder.setView(inflater.inflate(R.layout.dialog_rfid_information, null))
                                 // Add action buttons
-                                .setPositiveButton("Save", new DialogInterface.OnClickListener() {
+                                .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
                                     @Override
                                     public void onClick(DialogInterface dialog, int id) {
                                         // sign in the user ...
                                     }
                                 })
-                                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                                .setNegativeButton("Discard", new DialogInterface.OnClickListener() {
                                     public void onClick(DialogInterface dialog, int id) {
                                         //builder.cancel();
                                     }
