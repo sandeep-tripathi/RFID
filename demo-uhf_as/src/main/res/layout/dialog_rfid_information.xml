@@ -8,13 +8,13 @@
     android:clickable="false"
     android:orientation="vertical">
 
-    <ImageView
+   <!-- <ImageView
         android:id="@+id/logo"
         android:layout_width="38dp"
         android:layout_height="31dp"
         android:layout_gravity="right"
         android:src="@drawable/ovgu" />
-
+-->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="448dp"
