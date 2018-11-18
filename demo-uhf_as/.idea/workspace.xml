@@ -33,7 +33,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UHFReadTagFragment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UHFReadTagFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="303">
@@ -70,14 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dialog_rfid_information.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="dialog_rfid_information.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="715">
-              <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
-              <folding>
-                <element signature="e#3884#3917#0" expanded="true" />
-              </folding>
+              <caret line="183" selection-start-line="183" selection-end-line="183" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -1322,8 +1319,8 @@
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
       </list>
     </option>
   </component>
@@ -1691,19 +1688,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="715">
-          <caret line="131" column="33" selection-start-line="131" selection-start-column="33" selection-end-line="131" selection-end-column="33" />
-          <folding>
-            <element signature="e#3884#3917#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -1714,6 +1698,16 @@
             <element signature="e#15950#15951#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="183" selection-start-line="183" selection-end-line="183" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>
