@@ -13,6 +13,7 @@ import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.HttpHeaderParser;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.uhf.tools.UIHelper;
 import com.loopj.android.http.AsyncHttpClient;
 import com.loopj.android.http.AsyncHttpResponseHandler;
 
@@ -128,6 +129,64 @@ public class RfidInfoContainer {
 
         queue.add(req);
 
+    }
+
+    public static void submitDataToBackend(String json, final Context ctx) {
+        // Making HTTP request to the server
+        final String requestBody = json;
+
+        if(queue == null)
+            queue = Volley.newRequestQueue(ctx); // One time initialization
+
+        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/post", new Response.Listener() {
+            @Override
+            public void onResponse(Object response) {
+                UIHelper.ToastMessage(ctx, "Successfully saved!");
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                UIHelper.ToastMessage(ctx, "Save operation failed!");
+            }
+        }){
+            @Override
+            public String getBodyContentType() {
+                return "application/json; charset=utf-8";
+            }
+
+            @Override
+            public byte[] getBody() throws AuthFailureError {
+                try {
+                    return requestBody == null ? null : requestBody.getBytes("utf-8");
+                } catch (UnsupportedEncodingException uee) {
+                    VolleyLog.wtf("Unsupported Encoding while trying to get the bytes of %s using %s", requestBody, "utf-8");
+                    return null;
+                }
+            }
+
+            @Override
+            protected Response<String> parseNetworkResponse(NetworkResponse response) {
+//                String responseString = "";
+//                if (response != null) {
+//                    responseString = String.valueOf(response.statusCode);
+//                    System.out.println("dataaa: " + new String(response.data));
+//
+//                    try {
+//                        JSONObject responseJSON = new JSONObject(new String(response.data));
+//                        JSONObject data = responseJSON.getJSONArray("data").getJSONObject(0);
+//                        RfidInfoMap.put(data.getString("tagid"), new RfidInfo(data));
+//                    } catch (JSONException e) {
+//                        e.printStackTrace();
+//                    } catch (ParseException e) {
+//                        e.printStackTrace();
+//                    }
+//                    // can get more details such as response.headers
+//                }
+                return null;//Response.success(responseString, HttpHeaderParser.parseCacheHeaders(response));
+            }
+        };
+
+        queue.add(req);
     }
 
     public static void flushRfidInfo() {

@@ -568,20 +568,20 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         dialog.show();
 
         // Setting tagID from RfidInfo object obtained from the local app-cache
-        EditText tagIDfield = (EditText) dialog.findViewById(R.id.tagID);
+        final EditText tagIDfield = (EditText) dialog.findViewById(R.id.tagID);
         tagIDfield.setText(rfidInfo.getTagId());
 
         // Setting label from RfidInfo object obtained from the local app-cache
-        EditText labelField = (EditText) dialog.findViewById(R.id.label);
+        final EditText labelField = (EditText) dialog.findViewById(R.id.label);
         labelField.setText(rfidInfo.getLabelling());
 
         // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
-        EditText next_inspection_date = (EditText) dialog.findViewById(R.id.next_inspection_date);
+        final EditText next_inspection_date = (EditText) dialog.findViewById(R.id.next_inspection_date);
         next_inspection_date.setText(dateFormatter.format(rfidInfo.getNextInspectionDate()));
 
         // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
-        EditText remarks = (EditText) dialog.findViewById(R.id.remarks);
-        remarks.setText(rfidInfo.getRemarks());
+        final EditText remarksField = (EditText) dialog.findViewById(R.id.remarks);
+        remarksField.setText(rfidInfo.getRemarks());
 
         // Setting username from RfidInfo object obtained from the local app-cache
         if(username != null) {
@@ -596,7 +596,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
 
         // Setting the value of the equipment_status dropdown based on the value in the response received.
-        Spinner statusDropDown = (Spinner) dialog.findViewById(R.id.equipment_status);
+        final Spinner statusDropDown = (Spinner) dialog.findViewById(R.id.equipment_status);
 //        if(rfidInfo.getEquipment_status().equals("new")) {
 //            statusDropDown.setSelection(0);
 //        }
@@ -642,7 +642,30 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             @Override
             public void onClick(View v) {
                 username = ((EditText) dialog.findViewById(R.id.username)).getText().toString();
-                System.out.print(username);
+
+                String tagid = tagIDfield.getText().toString();
+                String remarks = remarksField.getText().toString();
+                String next_insp_date = next_inspection_date.getText().toString();
+                String equipment_status = "";
+                int selectedOption = statusDropDown.getSelectedItemPosition();
+                if(selectedOption == 1)
+                    equipment_status = "functional";
+                else if(selectedOption == 2)
+                    equipment_status = "defective";
+                else if(selectedOption == 3)
+                    equipment_status = "damaged";
+
+                if(username.isEmpty() || equipment_status.isEmpty())
+                    UIHelper.ToastMessage(getActivity().getApplicationContext(), "Consider entering username and equipment's status!");
+                else {
+                    String postRequestJSON = "{\"tagid\":\"" + tagid + "\"," +
+                            "\"equipment_status\":\"" + equipment_status + "\"," +
+                            "\"remarks\":\"" + remarks + "\"," +
+                            "\"username\":\"" + username + "\"," +
+                            "\"nextinspdate\":\"" + next_insp_date + "\"}";
+                    System.out.print(postRequestJSON);
+                    RfidInfoContainer.submitDataToBackend(postRequestJSON, getActivity().getApplicationContext());
+                }
             }
         });
     }
