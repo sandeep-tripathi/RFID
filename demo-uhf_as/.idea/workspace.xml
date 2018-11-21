@@ -36,8 +36,8 @@
       <file leaf-file-name="UHFReadTagFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="577" column="25" selection-start-line="577" selection-start-column="25" selection-end-line="577" selection-end-column="25" />
+            <state relative-caret-position="423">
+              <caret line="549" column="81" lean-forward="true" selection-start-line="549" selection-start-column="81" selection-end-line="549" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4981#11211#0" expanded="true" />
@@ -82,8 +82,8 @@
       <file leaf-file-name="RfidInfoContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-874">
-              <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+            <state relative-caret-position="117">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1398#1406#0" expanded="true" />
@@ -154,8 +154,8 @@
       <file leaf-file-name="dialog_rfid_information.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+            <state relative-caret-position="246">
+              <caret line="169" column="49" selection-start-line="169" selection-start-column="49" selection-end-line="169" selection-end-column="49" />
               <folding>
                 <element signature="e#5303#5336#0" expanded="true" />
               </folding>
@@ -169,8 +169,19 @@
       <file leaf-file-name="uhf_readtag_fragment.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+            <state relative-caret-position="371">
+              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+              <folding>
+                <element signature="e#698#725#0" expanded="true" />
+                <element signature="e#1077#1102#0" expanded="true" />
+                <element signature="e#2324#2350#0" expanded="true" />
+                <element signature="e#3550#3571#0" expanded="true" />
+                <element signature="e#3940#3957#0" expanded="true" />
+                <element signature="e#4362#4380#0" expanded="true" />
+                <element signature="e#6280#6298#0" expanded="true" />
+                <element signature="e#6842#6860#0" expanded="true" />
+                <element signature="e#7110#7130#0" expanded="true" />
+              </folding>
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -221,8 +232,9 @@
       <find>tagList</find>
       <find>init fail</find>
       <find>dataa</find>
-      <find>clear</find>
       <find>enter label</find>
+      <find>clear</find>
+      <find>next</find>
       <find>dataaa</find>
     </findStrings>
   </component>
@@ -1416,10 +1428,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java" />
       </list>
     </option>
@@ -1659,7 +1672,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32906976" />
-      <window_info anchor="bottom" id="Logcat" order="7" weight="0.47674417" />
+      <window_info anchor="bottom" id="Logcat" order="7" weight="0.1627907" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -1670,7 +1683,7 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.5255814" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32906976" />
       <window_info id="Designer" order="2" />
@@ -1743,55 +1756,13 @@
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>522</line>
+          <line>524</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>49</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>50</line>
-          <properties />
-          <option name="timeStamp" value="38" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>75</line>
-          <properties />
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>114</line>
-          <properties />
-          <option name="timeStamp" value="41" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>118</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>120</line>
-          <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>116</line>
-          <properties />
-          <option name="timeStamp" value="45" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>331</line>
+          <line>333</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
@@ -1809,108 +1780,90 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>332</line>
+          <line>334</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>541</line>
+          <line>543</line>
           <properties />
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>543</line>
+          <line>545</line>
           <properties />
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>547</line>
+          <line>549</line>
           <properties />
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>562</line>
+          <line>564</line>
           <properties />
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>566</line>
+          <line>568</line>
           <properties />
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>563</line>
+          <line>565</line>
           <properties />
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>567</line>
+          <line>569</line>
           <properties />
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>582</line>
+          <line>588</line>
           <properties />
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>584</line>
+          <line>590</line>
           <properties />
           <option name="timeStamp" value="59" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>583</line>
+          <line>589</line>
           <properties />
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>271</line>
-          <properties />
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>56</line>
-          <properties />
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>272</line>
-          <properties />
-          <option name="timeStamp" value="64" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>274</line>
-          <properties />
-          <option name="timeStamp" value="65" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>594</line>
+          <line>600</line>
           <properties />
           <option name="timeStamp" value="66" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>593</line>
+          <line>599</line>
           <properties />
           <option name="timeStamp" value="67" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
+          <line>577</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="68" />
+      <option name="time" value="69" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -2063,6 +2016,17 @@
       <provider editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="198" column="17" selection-start-line="198" selection-start-column="17" selection-end-line="198" selection-end-column="17" />
+          <folding>
+            <element signature="e#698#725#0" expanded="true" />
+            <element signature="e#1077#1102#0" expanded="true" />
+            <element signature="e#2324#2350#0" expanded="true" />
+            <element signature="e#3550#3571#0" expanded="true" />
+            <element signature="e#3940#3957#0" expanded="true" />
+            <element signature="e#4362#4380#0" expanded="true" />
+            <element signature="e#6280#6298#0" expanded="true" />
+            <element signature="e#6842#6860#0" expanded="true" />
+            <element signature="e#7110#7130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2">
@@ -2300,8 +2264,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="109" column="52" selection-start-line="109" selection-start-column="52" selection-end-line="109" selection-end-column="52" />
+        <state relative-caret-position="371">
+          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+          <folding>
+            <element signature="e#698#725#0" expanded="true" />
+            <element signature="e#1077#1102#0" expanded="true" />
+            <element signature="e#2324#2350#0" expanded="true" />
+            <element signature="e#3550#3571#0" expanded="true" />
+            <element signature="e#3940#3957#0" expanded="true" />
+            <element signature="e#4362#4380#0" expanded="true" />
+            <element signature="e#6280#6298#0" expanded="true" />
+            <element signature="e#6842#6860#0" expanded="true" />
+            <element signature="e#7110#7130#0" expanded="true" />
+          </folding>
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
@@ -2310,8 +2285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="123" column="32" selection-start-line="123" selection-start-column="32" selection-end-line="123" selection-end-column="32" />
+        <state relative-caret-position="246">
+          <caret line="169" column="49" selection-start-line="169" selection-start-column="49" selection-end-line="169" selection-end-column="49" />
           <folding>
             <element signature="e#5303#5336#0" expanded="true" />
           </folding>
@@ -2323,8 +2298,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-874">
-          <caret line="53" column="5" lean-forward="true" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
+        <state relative-caret-position="117">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1398#1406#0" expanded="true" />
@@ -2340,8 +2315,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="577" column="25" selection-start-line="577" selection-start-column="25" selection-end-line="577" selection-end-column="25" />
+        <state relative-caret-position="423">
+          <caret line="549" column="81" lean-forward="true" selection-start-line="549" selection-start-column="81" selection-end-line="549" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4981#11211#0" expanded="true" />

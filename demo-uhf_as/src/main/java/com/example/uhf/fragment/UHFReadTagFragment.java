@@ -88,7 +88,9 @@ public class UHFReadTagFragment extends KeyDwonFragment {
     private HashMap<String, String> map;
     PopupWindow popFilter;
 
+    // Our additions to existing attributes
     String username;
+    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
 
 
     @Override
@@ -571,6 +573,10 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         EditText labelField = (EditText) dialog.findViewById(R.id.label);
         labelField.setText(rfidInfo.getLabelling());
 
+        // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
+        EditText next_inspection_date = (EditText) dialog.findViewById(R.id.next_inspection_date);
+        next_inspection_date.setText(dateFormatter.format(rfidInfo.getNextInspectionDate()));
+
 
         // Setting username from RfidInfo object obtained from the local app-cache
         if(username != null) {
@@ -580,7 +586,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
 
 
-        String date_n = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+        String date_n = dateFormatter.format(new Date());
         TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
         date.setText(date_n);
 

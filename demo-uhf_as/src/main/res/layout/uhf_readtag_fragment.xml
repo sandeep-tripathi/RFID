@@ -52,7 +52,7 @@
 
         <LinearLayout
             android:id="@+id/llContinuous"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
         	android:gravity="center_vertical"
@@ -63,12 +63,24 @@
                 android:id="@+id/btnFilter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="0dp"
                 android:layout_weight="3"
-                android:text="@string/uhf_title_filter"
                 android:background="@drawable/button_bg"
+                android:text="@string/uhf_title_filter"
                 android:textColor="@color/white"
-                android:textSize="16sp"
-                android:layout_marginLeft="5dp" />
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/btnRefresh"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="0dp"
+                android:layout_weight="3"
+                android:background="@drawable/button_bg"
+                android:text="Refresh Info"
+                android:textColor="@color/white"
+                android:textSize="16sp" />
 
         </LinearLayout>
     </LinearLayout>

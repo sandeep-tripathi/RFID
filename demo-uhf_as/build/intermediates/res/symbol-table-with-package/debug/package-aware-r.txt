@@ -250,6 +250,7 @@ id btnGetWait
 id btnKill
 id btnLock
 id btnOk
+id btnRefresh
 id btnSetAgreement
 id btnSetFreHop
 id btnSetLinkParams
@@ -278,7 +279,6 @@ id currentDate
 id decode
 id decode_failed
 id decode_succeeded
-id editText3
 id editText4
 id etData
 id etData_filter
@@ -308,6 +308,7 @@ id layout4
 id listView_frequency
 id llContinuous
 id ll_freHop
+id next_inspection_date
 id pager
 id quit
 id rbEPC
