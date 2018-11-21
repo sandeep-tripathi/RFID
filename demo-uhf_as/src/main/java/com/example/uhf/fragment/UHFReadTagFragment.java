@@ -30,7 +30,20 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
+import com.android.volley.NetworkResponse;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.Response.ErrorListener;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.HttpHeaderParser;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.uhf.R;
+import com.example.uhf.RFIDcache.RfidInfo;
+import com.example.uhf.RFIDcache.RfidInfoContainer;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
@@ -40,6 +53,9 @@ import com.loopj.android.http.AsyncHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 import com.rscja.deviceapi.RFIDWithUHF;
 
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
@@ -71,6 +87,8 @@ public class UHFReadTagFragment extends KeyDwonFragment {
     private UHFMainActivity mContext;
     private HashMap<String, String> map;
     PopupWindow popFilter;
+
+    String username;
 
 
     @Override
@@ -246,6 +264,20 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 mContext.playSound(1);
             }
         };
+
+        LvTags.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view,
+                                    int position, long id) {
+                //Toast.makeText(getActivity().getApplicationContext(), "Click ListItem Number " + position + "\n" + tagList.get(position).get("tagUii"), Toast.LENGTH_SHORT).show();
+                RfidInfo infoOfSelectedTagID = RfidInfoContainer.findRfidInfo(tagList.get(position).get("tagUii").replace("EPC:", ""));
+                if(infoOfSelectedTagID != null)
+                    rfidPopup(infoOfSelectedTagID);
+                else
+                    UIHelper.ToastMessage(getActivity().getApplicationContext(), "No relevant information found! \nConsidering registering the tag.");
+
+            }
+        });
     }
 
     @Override
@@ -297,7 +329,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
         @Override
         public void onClick(View v) {
-
+            RfidInfoContainer.flushRfidInfo(); // Flushing everything fetched from the backend so far.
             clearData();
 
         }
@@ -386,85 +418,6 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
 
 
-
-
-
-
-
-                        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
-                        // Get the layout inflater
-                        LayoutInflater inflater = getActivity().getLayoutInflater();
-
-                        // Inflate and set the layout for the dialog
-                        // Pass null as the parent view because its going in the dialog layout
-                        builder.setView(inflater.inflate(R.layout.dialog_rfid_information, null))
-                                // Add action buttons
-                                .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        // sign in the user ...
-                                    }
-                                })
-                                .setNegativeButton("Discard", new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int id) {
-                                        //builder.cancel();
-                                    }
-                                });
-
-                        // 3. Get the AlertDialog
-                        AlertDialog dialog = builder.create();
-
-                        dialog.show();
-                        EditText editText = (EditText) dialog.findViewById(R.id.tagID);
-                        editText.setText(strEPC);
-
-                        String date_n = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
-                        TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
-                        date.setText(date_n);
-
-
-
-                        // Making HTTP request to the server
-                        AsyncHttpClient client = new AsyncHttpClient();
-
-                        RequestParams params = new RequestParams();
-                        params.put("tagids", "[\"111133B2DDD9014000000000\"]");
-                        String payload = "{\"tagids\":[\"1143243\"]}";
-                        StringEntity payloadStringEntity = null;
-                        try {
-                            payloadStringEntity = new StringEntity("{\"tagids\":[\"1143243\"]}");
-                        } catch (UnsupportedEncodingException e) {
-                            e.printStackTrace();
-                        }
-
-                        Toast.makeText(getActivity().getApplicationContext(), "Welcome to RFID-UHF APP", Toast.LENGTH_SHORT).show();
-
-                        client.post(getActivity().getApplicationContext(), "http://46.101.232.21:1080/api/app1", payloadStringEntity, "application/json", new AsyncHttpResponseHandler() {
-                        // client.get("http://www.google.com", new AsyncHttpResponseHandler() {
-                            @Override
-                            public void onStart() {
-                                // called before request is started
-                                toastNotify("Starting!!!!");
-                            }
-
-                            @Override
-                            public void onSuccess(int statusCode, Header[] headers, byte[] response) {
-                                // called when response HTTP status is "200 OK"
-                                toastNotify("Done!!!!");
-                            }
-
-                            @Override
-                            public void onFailure(int statusCode, Header[] headers, byte[] errorResponse, Throwable e) {
-                                // called when response HTTP status is "4XX" (eg. 401, 403, 404)
-                                toastNotify("Failed!!!!");
-                            }
-
-                            @Override
-                            public void onRetry(int retryNo) {
-                                // called when request is retried
-                                toastNotify("Retrying!!!!");
-                            }
-                        });
 
 
                     } else {
@@ -565,6 +518,15 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                     msg.obj = strResult + "EPC:" + mContext.mReader.convertUiiToEPC(res[1]) + "@" + res[2];
 
                     handler.sendMessage(msg);
+
+                    try {
+                       RfidInfoContainer.insertRfidInfo(mContext.mReader.convertUiiToEPC(res[1]), getActivity().getApplicationContext());
+
+
+
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         }
@@ -575,8 +537,63 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         readTag();
     }
 
-    public void toastNotify(String toastMessage) {
-        Toast.makeText(getActivity().getApplicationContext(), toastMessage, Toast.LENGTH_SHORT).show();
-    }
 
+    public void rfidPopup(RfidInfo rfidInfo) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // Get the layout inflater
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+
+        // Inflate and set the layout for the dialog
+        // Pass null as the parent view because its going in the dialog layout
+        builder.setView(inflater.inflate(R.layout.dialog_rfid_information, null))
+                // Add action buttons
+                .setPositiveButton("Submit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogAlert, int id) {
+                        // sign in the user ...
+                    }
+                })
+                .setNegativeButton("Discard", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialogAlert, int id) {
+                        //builder.cancel();
+                    }
+                });
+
+        // 3. Get the AlertDialog
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+        // Setting tagID from RfidInfo object obtained from the local app-cache
+        EditText tagIDfield = (EditText) dialog.findViewById(R.id.tagID);
+        tagIDfield.setText(rfidInfo.getTagId());
+
+        // Setting label from RfidInfo object obtained from the local app-cache
+        EditText labelField = (EditText) dialog.findViewById(R.id.label);
+        labelField.setText(rfidInfo.getLabelling());
+
+
+        // Setting username from RfidInfo object obtained from the local app-cache
+        if(username != null) {
+            EditText usernameField = (EditText) dialog.findViewById(R.id.username);
+            usernameField.setText(username);
+        }
+
+
+
+        String date_n = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+        TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
+        date.setText(date_n);
+
+
+
+        Button theButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
+        theButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                username = ((EditText) dialog.findViewById(R.id.username)).getText().toString();
+                System.out.print(username);
+            }
+        });
+    }
 }

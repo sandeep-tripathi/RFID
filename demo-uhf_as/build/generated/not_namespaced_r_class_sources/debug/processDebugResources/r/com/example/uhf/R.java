@@ -389,15 +389,12 @@ public final class R {
     public static final int splinkParams=0x7f07008e;
     public static final int spsession=0x7f07008f;
     public static final int tagID=0x7f070090;
-    public static final int textView=0x7f070091;
-    public static final int textView2=0x7f070092;
-    public static final int textView4=0x7f070093;
-    public static final int textView5=0x7f070094;
-    public static final int tv=0x7f070095;
-    public static final int tv_count=0x7f070096;
-    public static final int tv_normal_set=0x7f070097;
-    public static final int username=0x7f070098;
-    public static final int xrayImage=0x7f070099;
+    public static final int textView4=0x7f070091;
+    public static final int tv=0x7f070092;
+    public static final int tv_count=0x7f070093;
+    public static final int tv_normal_set=0x7f070094;
+    public static final int username=0x7f070095;
+    public static final int xrayImage=0x7f070096;
   }
   public static final class integer {
     public static final int num_cols=0x7f080000;
