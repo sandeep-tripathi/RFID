@@ -326,7 +326,7 @@ public final class R {
     public static final int decode=0x7f07004f;
     public static final int decode_failed=0x7f070050;
     public static final int decode_succeeded=0x7f070051;
-    public static final int editText4=0x7f070052;
+    public static final int equipment_status=0x7f070052;
     public static final int etData=0x7f070053;
     public static final int etData_filter=0x7f070054;
     public static final int etData_filter_deact=0x7f070055;
@@ -380,12 +380,12 @@ public final class R {
     public static final int rb_Europe=0x7f070085;
     public static final int rb_Others=0x7f070086;
     public static final int rb_china=0x7f070087;
-    public static final int restart_preview=0x7f070088;
-    public static final int return_scan_result=0x7f070089;
-    public static final int rgFileType=0x7f07008a;
-    public static final int spFreHop=0x7f07008b;
-    public static final int spPower=0x7f07008c;
-    public static final int spinner=0x7f07008d;
+    public static final int remarks=0x7f070088;
+    public static final int restart_preview=0x7f070089;
+    public static final int return_scan_result=0x7f07008a;
+    public static final int rgFileType=0x7f07008b;
+    public static final int spFreHop=0x7f07008c;
+    public static final int spPower=0x7f07008d;
     public static final int spinv=0x7f07008e;
     public static final int splinkParams=0x7f07008f;
     public static final int spsession=0x7f070090;

@@ -279,7 +279,7 @@ id currentDate
 id decode
 id decode_failed
 id decode_succeeded
-id editText4
+id equipment_status
 id etData
 id etData_filter
 id etData_filter_deact
@@ -333,12 +333,12 @@ id rb_America
 id rb_Europe
 id rb_Others
 id rb_china
+id remarks
 id restart_preview
 id return_scan_result
 id rgFileType
 id spFreHop
 id spPower
-id spinner
 id spinv
 id splinkParams
 id spsession

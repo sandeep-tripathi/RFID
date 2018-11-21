@@ -146,7 +146,7 @@
             android:text="Status of Equipment:" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/equipment_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:entries="@array/equipment_status_arrays"
@@ -190,7 +190,7 @@
 
         <EditText
 
-            android:id="@+id/editText4"
+            android:id="@+id/remarks"
             android:layout_width="332dp"
             android:layout_height="59dp"
             android:layout_alignParentTop="true"

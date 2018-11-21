@@ -278,7 +278,7 @@ int id currentDate 0x7f07004e
 int id decode 0x7f07004f
 int id decode_failed 0x7f070050
 int id decode_succeeded 0x7f070051
-int id editText4 0x7f070052
+int id equipment_status 0x7f070052
 int id etData 0x7f070053
 int id etData_filter 0x7f070054
 int id etData_filter_deact 0x7f070055
@@ -332,12 +332,12 @@ int id rb_America 0x7f070084
 int id rb_Europe 0x7f070085
 int id rb_Others 0x7f070086
 int id rb_china 0x7f070087
-int id restart_preview 0x7f070088
-int id return_scan_result 0x7f070089
-int id rgFileType 0x7f07008a
-int id spFreHop 0x7f07008b
-int id spPower 0x7f07008c
-int id spinner 0x7f07008d
+int id remarks 0x7f070088
+int id restart_preview 0x7f070089
+int id return_scan_result 0x7f07008a
+int id rgFileType 0x7f07008b
+int id spFreHop 0x7f07008c
+int id spPower 0x7f07008d
 int id spinv 0x7f07008e
 int id splinkParams 0x7f07008f
 int id spsession 0x7f070090

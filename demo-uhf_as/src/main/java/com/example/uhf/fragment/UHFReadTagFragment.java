@@ -60,6 +60,7 @@ import org.json.JSONObject;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
@@ -540,7 +541,8 @@ public class UHFReadTagFragment extends KeyDwonFragment {
     }
 
 
-    public void rfidPopup(RfidInfo rfidInfo) {
+    public void rfidPopup(final RfidInfo rfidInfo) {
+
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         // Get the layout inflater
         LayoutInflater inflater = getActivity().getLayoutInflater();
@@ -577,6 +579,9 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         EditText next_inspection_date = (EditText) dialog.findViewById(R.id.next_inspection_date);
         next_inspection_date.setText(dateFormatter.format(rfidInfo.getNextInspectionDate()));
 
+        // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
+        EditText remarks = (EditText) dialog.findViewById(R.id.remarks);
+        remarks.setText(rfidInfo.getRemarks());
 
         // Setting username from RfidInfo object obtained from the local app-cache
         if(username != null) {
@@ -584,13 +589,52 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             usernameField.setText(username);
         }
 
-
-
+        // Setting the value of the current date
         String date_n = dateFormatter.format(new Date());
         TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
         date.setText(date_n);
 
 
+        // Setting the value of the equipment_status dropdown based on the value in the response received.
+        Spinner statusDropDown = (Spinner) dialog.findViewById(R.id.equipment_status);
+//        if(rfidInfo.getEquipment_status().equals("new")) {
+//            statusDropDown.setSelection(0);
+//        }
+//        else if(rfidInfo.getEquipment_status().equals("old/usable")) {
+//            statusDropDown.setSelection(1);
+//        }
+//        else if(rfidInfo.getEquipment_status().equals("non-usable")) {
+//            statusDropDown.setSelection(2);
+//        }
+        statusDropDown.setOnItemSelectedListener(new OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(position != 0) {
+                    if(position == 1) {
+                        Calendar cal = Calendar.getInstance();
+                        Date today = cal.getTime();
+                        cal.add(Calendar.YEAR, 3); // to get previous year add -1
+                        Date after3Years = cal.getTime();
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after3Years));
+                    } else if(position == 2) {
+                        Calendar cal = Calendar.getInstance();
+                        Date today = cal.getTime();
+                        cal.add(Calendar.YEAR, 2); // to get previous year add -1
+                        Date after2Years = cal.getTime();
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after2Years));
+                    } else if(position == 3) {
+                        Calendar cal = Calendar.getInstance();
+                        Date today = cal.getTime();
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(today));
+                    }
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
 
         Button theButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         theButton.setOnClickListener(new View.OnClickListener() {

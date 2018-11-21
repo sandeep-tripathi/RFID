@@ -9,11 +9,10 @@ import java.util.Date;
 
 public class RfidInfo {
     private String tagId;
-    private String equipment;
     private Date nextInspectionDate;
-    private String equipmentType;
     private String labelling;
-
+    private String equipment_status;
+    private String remarks;
 
     private static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss.SSS");
 
@@ -22,10 +21,10 @@ public class RfidInfo {
     public RfidInfo(JSONObject json) throws JSONException, ParseException {
         // Getting everything necessary out from the json-object
         this.tagId = json.getString("tagid");
-        this.equipment = json.getString("equipment");
         this.nextInspectionDate = dateFormat.parse(json.getString("nextinspdate").replace("T", " "));
-        this.equipmentType = json.getString("equipment_type");
         this.labelling = json.getString("labelling");
+        this.remarks = json.getString("remarks");
+        this.equipment_status = json.getString("equipment_status");
     }
 
     public String getTagId() {
@@ -36,14 +35,6 @@ public class RfidInfo {
         this.tagId = tagId;
     }
 
-    public String getEquipment() {
-        return equipment;
-    }
-
-    public void setEquipment(String equipment) {
-        this.equipment = equipment;
-    }
-
     public Date getNextInspectionDate() {
         return nextInspectionDate;
     }
@@ -52,19 +43,27 @@ public class RfidInfo {
         this.nextInspectionDate = nextInspectionDate;
     }
 
-    public String getEquipmentType() {
-        return equipmentType;
-    }
-
-    public void setEquipmentType(String equipmentType) {
-        this.equipmentType = equipmentType;
-    }
-
     public String getLabelling() {
         return labelling;
     }
 
     public void setLabelling(String labelling) {
         this.labelling = labelling;
+    }
+
+    public String getEquipment_status() {
+        return equipment_status;
+    }
+
+    public void setEquipment_status(String equipment_status) {
+        this.equipment_status = equipment_status;
+    }
+
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
     }
 }

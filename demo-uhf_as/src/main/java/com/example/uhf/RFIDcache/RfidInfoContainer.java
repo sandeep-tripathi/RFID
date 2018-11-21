@@ -38,11 +38,11 @@ public class RfidInfoContainer {
     private static Map<String, RfidInfo> RfidInfoMap = new HashMap<String, RfidInfo>();
 
     // Making HTTP request to the server
-    private static AsyncHttpClient client = new AsyncHttpClient();
+    public static AsyncHttpClient client = new AsyncHttpClient();
 
-    private static RequestQueue queue;
+    public static RequestQueue queue;
 
-    private static Set<String> rfidTagsSubmittedForResponse = new HashSet<String>();
+    public static Set<String> rfidTagsSubmittedForResponse = new HashSet<String>();
 
     public static synchronized void insertRfidInfo(String tagID, Context ctx) throws UnsupportedEncodingException {
 
@@ -78,7 +78,7 @@ public class RfidInfoContainer {
         if(queue == null)
             queue = Volley.newRequestQueue(ctx); // One time initialization
 
-        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app1", new Response.Listener() {
+        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/get", new Response.Listener() {
             @Override
             public void onResponse(Object response) {
                 System.out.println("Success Testinggg: " + response.toString());
