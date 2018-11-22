@@ -221,6 +221,7 @@ id EtPtr_Read
 id EtPtr_Write
 id EtTagUii_Write
 id Etcmd
+id Header
 id LvTags
 id RbInventoryLoop
 id RbInventorySingle
@@ -239,6 +240,7 @@ id UHF_ver
 id action_kill
 id action_lock
 id action_set
+id apron_Image
 id btSet
 id btnDisable
 id btnFilter
@@ -298,7 +300,6 @@ id etPtr_filter_lock
 id etPtr_filter_wt
 id et_waittime
 id et_worktime
-id imageView4
 id iv_dismissDialog
 id label
 id launch_product_query
@@ -343,7 +344,6 @@ id spinv
 id splinkParams
 id spsession
 id tagID
-id textView4
 id tv
 id tv_count
 id tv_normal_set

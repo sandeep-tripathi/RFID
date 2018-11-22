@@ -36,44 +36,46 @@
       <file leaf-file-name="UHFReadTagFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="666" column="114" lean-forward="true" selection-start-line="666" selection-start-column="114" selection-end-line="666" selection-end-column="114" />
+            <state relative-caret-position="487">
+              <caret line="675" column="59" selection-start-line="675" selection-start-column="59" selection-end-line="675" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4981#11211#0" expanded="true" />
-                <element signature="e#6333#9353#0" expanded="true" />
-                <element signature="e#8247#8279#0" expanded="true" />
-                <element signature="e#8391#8423#0" expanded="true" />
-                <element signature="e#9075#9100#0" expanded="true" />
-                <element signature="e#9212#9237#0" expanded="true" />
-                <element signature="e#9352#9353#0" expanded="true" />
-                <element signature="e#9491#9789#0" expanded="true" />
-                <element signature="e#9788#9789#0" expanded="true" />
-                <element signature="e#9837#10134#0" expanded="true" />
-                <element signature="e#10133#10134#0" expanded="true" />
-                <element signature="e#10183#10481#0" expanded="true" />
-                <element signature="e#10480#10481#0" expanded="true" />
-                <element signature="e#10542#10948#0" expanded="true" />
-                <element signature="e#10947#10948#0" expanded="true" />
-                <element signature="e#11210#11211#0" expanded="true" />
-                <element signature="e#11368#11666#0" expanded="true" />
-                <element signature="e#11665#11666#0" expanded="true" />
-                <element signature="e#11707#12304#0" expanded="true" />
-                <element signature="e#12303#12304#0" expanded="true" />
-                <element signature="e#13881#13921#0" expanded="true" />
-                <element signature="e#15584#15624#0" expanded="true" />
-                <element signature="e#16149#16180#0" expanded="true" />
-                <element signature="e#16538#16620#0" expanded="true" />
-                <element signature="e#16935#16971#0" expanded="true" />
-                <element signature="e#17668#17708#0" expanded="true" />
+                <element signature="e#5173#11403#0" expanded="true" />
+                <element signature="e#6525#9545#0" expanded="true" />
+                <element signature="e#8439#8471#0" expanded="true" />
+                <element signature="e#8583#8615#0" expanded="true" />
+                <element signature="e#9267#9292#0" expanded="true" />
+                <element signature="e#9404#9429#0" expanded="true" />
+                <element signature="e#9544#9545#0" expanded="true" />
+                <element signature="e#9683#9981#0" expanded="true" />
+                <element signature="e#9980#9981#0" expanded="true" />
+                <element signature="e#10029#10326#0" expanded="true" />
+                <element signature="e#10325#10326#0" expanded="true" />
+                <element signature="e#10375#10673#0" expanded="true" />
+                <element signature="e#10672#10673#0" expanded="true" />
+                <element signature="e#10734#11140#0" expanded="true" />
+                <element signature="e#11139#11140#0" expanded="true" />
+                <element signature="e#11402#11403#0" expanded="true" />
+                <element signature="e#11560#11858#0" expanded="true" />
+                <element signature="e#11857#11858#0" expanded="true" />
+                <element signature="e#11899#12706#0" expanded="true" />
+                <element signature="e#12705#12706#0" expanded="true" />
+                <element signature="e#12819#13173#0" expanded="true" />
+                <element signature="e#13172#13173#0" expanded="true" />
+                <element signature="e#14750#14790#0" expanded="true" />
+                <element signature="e#16453#16493#0" expanded="true" />
+                <element signature="e#17018#17049#0" expanded="true" />
+                <element signature="e#17407#17489#0" expanded="true" />
                 <element signature="e#17804#17840#0" expanded="true" />
-                <element signature="e#18245#18261#0" expanded="true" />
-                <element signature="e#20585#20875#0" expanded="true" />
-                <element signature="e#20874#20875#0" expanded="true" />
-                <element signature="e#20923#21125#0" expanded="true" />
-                <element signature="e#21124#21125#0" expanded="true" />
-                <element signature="e#24011#24269#0" expanded="true" />
-                <element signature="e#24268#24269#0" expanded="true" />
+                <element signature="e#18537#18577#0" expanded="true" />
+                <element signature="e#18673#18709#0" expanded="true" />
+                <element signature="e#19114#19130#0" expanded="true" />
+                <element signature="e#21229#21465#0" expanded="true" />
+                <element signature="e#21464#21465#0" expanded="true" />
+                <element signature="e#21513#21715#0" expanded="true" />
+                <element signature="e#21714#21715#0" expanded="true" />
+                <element signature="e#25491#27491#0" expanded="true" />
+                <element signature="e#27490#27491#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,8 +84,8 @@
       <file leaf-file-name="RfidInfoContainer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+            <state relative-caret-position="127">
+              <caret line="114" selection-start-line="114" selection-end-line="114" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1398#1406#0" expanded="true" />
@@ -154,10 +156,10 @@
       <file leaf-file-name="dialog_rfid_information.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="117">
-              <caret line="148" column="45" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="45" />
+            <state relative-caret-position="255">
+              <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
               <folding>
-                <element signature="e#5303#5336#0" expanded="true" />
+                <element signature="e#5707#5740#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -169,8 +171,8 @@
       <file leaf-file-name="uhf_readtag_fragment.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="371">
-              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
+            <state relative-caret-position="312">
+              <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
               <folding>
                 <element signature="e#698#725#0" expanded="true" />
                 <element signature="e#1077#1102#0" expanded="true" />
@@ -239,6 +241,7 @@
       <find>malfunctional</find>
       <find>111133B2DDD9014000000000</find>
       <find>&quot;tagid&quot;</find>
+      <find>refresh</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -1431,11 +1434,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
         <option value="$PROJECT_DIR$/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/tools/NetworkActivity.java" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml" />
+        <option value="$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java" />
       </list>
@@ -1678,7 +1681,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50053364" side_tool="true" visible="true" weight="0.24767442" />
       <window_info anchor="right" id="Preview" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
@@ -1687,14 +1690,14 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24759872" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.32906976" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24759872" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.4994664" weight="0.32906976" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.40348837" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.4994664" visible="true" weight="0.24767442" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.32906976" />
       <window_info id="Designer" order="2" />
@@ -1762,122 +1765,121 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>525</line>
+          <line>536</line>
           <properties />
           <option name="timeStamp" value="35" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>334</line>
+          <line>345</line>
           <properties />
           <option name="timeStamp" value="47" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>192</line>
+          <line>175</line>
           <properties />
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>193</line>
+          <line>176</line>
           <properties />
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>335</line>
+          <line>346</line>
           <properties />
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>644</line>
-          <properties />
-          <option name="timeStamp" value="66" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>643</line>
-          <properties />
-          <option name="timeStamp" value="67" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>115</line>
+          <line>114</line>
           <properties />
           <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>116</line>
+          <line>115</line>
           <properties />
           <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>117</line>
+          <line>116</line>
           <properties />
           <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>125</line>
+          <line>124</line>
           <properties />
           <option name="timeStamp" value="80" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>119</line>
+          <line>118</line>
           <properties />
           <option name="timeStamp" value="81" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
-          <line>121</line>
+          <line>120</line>
           <properties />
           <option name="timeStamp" value="82" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>598</line>
+          <line>677</line>
           <properties />
-          <option name="timeStamp" value="84" />
+          <option name="timeStamp" value="93" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
+          <line>187</line>
+          <properties />
+          <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>638</line>
+          <line>288</line>
           <properties />
-          <option name="timeStamp" value="86" />
+          <option name="timeStamp" value="98" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java</url>
+          <line>190</line>
+          <properties />
+          <option name="timeStamp" value="99" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>608</line>
+          <line>556</line>
           <properties />
-          <option name="timeStamp" value="87" />
+          <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>611</line>
+          <line>590</line>
           <properties />
-          <option name="timeStamp" value="88" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java</url>
-          <line>665</line>
-          <properties />
-          <option name="timeStamp" value="92" />
+          <option name="timeStamp" value="101" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="93" />
+      <option name="time" value="102" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
@@ -1887,40 +1889,42 @@
           <caret line="413" column="68" selection-start-line="413" selection-start-column="68" selection-end-line="413" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4981#11211#0" expanded="true" />
-            <element signature="e#6333#9353#0" expanded="true" />
-            <element signature="e#8247#8279#0" expanded="true" />
-            <element signature="e#8391#8423#0" expanded="true" />
-            <element signature="e#9075#9100#0" expanded="true" />
-            <element signature="e#9212#9237#0" expanded="true" />
-            <element signature="e#9352#9353#0" expanded="true" />
-            <element signature="e#9491#9789#0" expanded="true" />
-            <element signature="e#9788#9789#0" expanded="true" />
-            <element signature="e#9837#10134#0" expanded="true" />
-            <element signature="e#10133#10134#0" expanded="true" />
-            <element signature="e#10183#10481#0" expanded="true" />
-            <element signature="e#10480#10481#0" expanded="true" />
-            <element signature="e#10542#10948#0" expanded="true" />
-            <element signature="e#10947#10948#0" expanded="true" />
-            <element signature="e#11210#11211#0" expanded="true" />
-            <element signature="e#11368#11666#0" expanded="true" />
-            <element signature="e#11665#11666#0" expanded="true" />
-            <element signature="e#11707#12304#0" expanded="true" />
-            <element signature="e#12303#12304#0" expanded="true" />
-            <element signature="e#13881#13921#0" expanded="true" />
-            <element signature="e#15584#15624#0" expanded="true" />
-            <element signature="e#16149#16180#0" expanded="true" />
-            <element signature="e#16538#16620#0" expanded="true" />
-            <element signature="e#16935#16971#0" expanded="true" />
-            <element signature="e#17668#17708#0" expanded="true" />
+            <element signature="e#5173#11403#0" expanded="true" />
+            <element signature="e#6525#9545#0" expanded="true" />
+            <element signature="e#8439#8471#0" expanded="true" />
+            <element signature="e#8583#8615#0" expanded="true" />
+            <element signature="e#9267#9292#0" expanded="true" />
+            <element signature="e#9404#9429#0" expanded="true" />
+            <element signature="e#9544#9545#0" expanded="true" />
+            <element signature="e#9683#9981#0" expanded="true" />
+            <element signature="e#9980#9981#0" expanded="true" />
+            <element signature="e#10029#10326#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
+            <element signature="e#10375#10673#0" expanded="true" />
+            <element signature="e#10672#10673#0" expanded="true" />
+            <element signature="e#10734#11140#0" expanded="true" />
+            <element signature="e#11139#11140#0" expanded="true" />
+            <element signature="e#11402#11403#0" expanded="true" />
+            <element signature="e#11560#11858#0" expanded="true" />
+            <element signature="e#11857#11858#0" expanded="true" />
+            <element signature="e#11899#12706#0" expanded="true" />
+            <element signature="e#12705#12706#0" expanded="true" />
+            <element signature="e#12819#13173#0" expanded="true" />
+            <element signature="e#13172#13173#0" expanded="true" />
+            <element signature="e#14750#14790#0" expanded="true" />
+            <element signature="e#16453#16493#0" expanded="true" />
+            <element signature="e#17018#17049#0" expanded="true" />
+            <element signature="e#17407#17489#0" expanded="true" />
             <element signature="e#17804#17840#0" expanded="true" />
-            <element signature="e#18245#18261#0" expanded="true" />
-            <element signature="e#20585#20875#0" expanded="true" />
-            <element signature="e#20874#20875#0" expanded="true" />
-            <element signature="e#20923#21125#0" expanded="true" />
-            <element signature="e#21124#21125#0" expanded="true" />
-            <element signature="e#24011#24269#0" expanded="true" />
-            <element signature="e#24268#24269#0" expanded="true" />
+            <element signature="e#18537#18577#0" expanded="true" />
+            <element signature="e#18673#18709#0" expanded="true" />
+            <element signature="e#19114#19130#0" expanded="true" />
+            <element signature="e#21229#21465#0" expanded="true" />
+            <element signature="e#21464#21465#0" expanded="true" />
+            <element signature="e#21513#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#25491#27491#0" expanded="true" />
+            <element signature="e#27490#27491#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2066,40 +2070,42 @@
           <caret line="567" column="22" selection-start-line="567" selection-start-column="22" selection-end-line="567" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4981#11211#0" expanded="true" />
-            <element signature="e#6333#9353#0" expanded="true" />
-            <element signature="e#8247#8279#0" expanded="true" />
-            <element signature="e#8391#8423#0" expanded="true" />
-            <element signature="e#9075#9100#0" expanded="true" />
-            <element signature="e#9212#9237#0" expanded="true" />
-            <element signature="e#9352#9353#0" expanded="true" />
-            <element signature="e#9491#9789#0" expanded="true" />
-            <element signature="e#9788#9789#0" expanded="true" />
-            <element signature="e#9837#10134#0" expanded="true" />
-            <element signature="e#10133#10134#0" expanded="true" />
-            <element signature="e#10183#10481#0" expanded="true" />
-            <element signature="e#10480#10481#0" expanded="true" />
-            <element signature="e#10542#10948#0" expanded="true" />
-            <element signature="e#10947#10948#0" expanded="true" />
-            <element signature="e#11210#11211#0" expanded="true" />
-            <element signature="e#11368#11666#0" expanded="true" />
-            <element signature="e#11665#11666#0" expanded="true" />
-            <element signature="e#11707#12304#0" expanded="true" />
-            <element signature="e#12303#12304#0" expanded="true" />
-            <element signature="e#13881#13921#0" expanded="true" />
-            <element signature="e#15584#15624#0" expanded="true" />
-            <element signature="e#16149#16180#0" expanded="true" />
-            <element signature="e#16538#16620#0" expanded="true" />
-            <element signature="e#16935#16971#0" expanded="true" />
-            <element signature="e#17668#17708#0" expanded="true" />
+            <element signature="e#5173#11403#0" expanded="true" />
+            <element signature="e#6525#9545#0" expanded="true" />
+            <element signature="e#8439#8471#0" expanded="true" />
+            <element signature="e#8583#8615#0" expanded="true" />
+            <element signature="e#9267#9292#0" expanded="true" />
+            <element signature="e#9404#9429#0" expanded="true" />
+            <element signature="e#9544#9545#0" expanded="true" />
+            <element signature="e#9683#9981#0" expanded="true" />
+            <element signature="e#9980#9981#0" expanded="true" />
+            <element signature="e#10029#10326#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
+            <element signature="e#10375#10673#0" expanded="true" />
+            <element signature="e#10672#10673#0" expanded="true" />
+            <element signature="e#10734#11140#0" expanded="true" />
+            <element signature="e#11139#11140#0" expanded="true" />
+            <element signature="e#11402#11403#0" expanded="true" />
+            <element signature="e#11560#11858#0" expanded="true" />
+            <element signature="e#11857#11858#0" expanded="true" />
+            <element signature="e#11899#12706#0" expanded="true" />
+            <element signature="e#12705#12706#0" expanded="true" />
+            <element signature="e#12819#13173#0" expanded="true" />
+            <element signature="e#13172#13173#0" expanded="true" />
+            <element signature="e#14750#14790#0" expanded="true" />
+            <element signature="e#16453#16493#0" expanded="true" />
+            <element signature="e#17018#17049#0" expanded="true" />
+            <element signature="e#17407#17489#0" expanded="true" />
             <element signature="e#17804#17840#0" expanded="true" />
-            <element signature="e#18245#18261#0" expanded="true" />
-            <element signature="e#20585#20875#0" expanded="true" />
-            <element signature="e#20874#20875#0" expanded="true" />
-            <element signature="e#20923#21125#0" expanded="true" />
-            <element signature="e#21124#21125#0" expanded="true" />
-            <element signature="e#24011#24269#0" expanded="true" />
-            <element signature="e#24268#24269#0" expanded="true" />
+            <element signature="e#18537#18577#0" expanded="true" />
+            <element signature="e#18673#18709#0" expanded="true" />
+            <element signature="e#19114#19130#0" expanded="true" />
+            <element signature="e#21229#21465#0" expanded="true" />
+            <element signature="e#21464#21465#0" expanded="true" />
+            <element signature="e#21513#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#25491#27491#0" expanded="true" />
+            <element signature="e#27490#27491#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2109,7 +2115,7 @@
         <state relative-caret-position="239">
           <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
           <folding>
-            <element signature="e#5303#5336#0" expanded="true" />
+            <element signature="e#5707#5740#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2123,40 +2129,42 @@
           <caret line="413" column="68" selection-start-line="413" selection-start-column="68" selection-end-line="413" selection-end-column="68" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4981#11211#0" expanded="true" />
-            <element signature="e#6333#9353#0" expanded="true" />
-            <element signature="e#8247#8279#0" expanded="true" />
-            <element signature="e#8391#8423#0" expanded="true" />
-            <element signature="e#9075#9100#0" expanded="true" />
-            <element signature="e#9212#9237#0" expanded="true" />
-            <element signature="e#9352#9353#0" expanded="true" />
-            <element signature="e#9491#9789#0" expanded="true" />
-            <element signature="e#9788#9789#0" expanded="true" />
-            <element signature="e#9837#10134#0" expanded="true" />
-            <element signature="e#10133#10134#0" expanded="true" />
-            <element signature="e#10183#10481#0" expanded="true" />
-            <element signature="e#10480#10481#0" expanded="true" />
-            <element signature="e#10542#10948#0" expanded="true" />
-            <element signature="e#10947#10948#0" expanded="true" />
-            <element signature="e#11210#11211#0" expanded="true" />
-            <element signature="e#11368#11666#0" expanded="true" />
-            <element signature="e#11665#11666#0" expanded="true" />
-            <element signature="e#11707#12304#0" expanded="true" />
-            <element signature="e#12303#12304#0" expanded="true" />
-            <element signature="e#13881#13921#0" expanded="true" />
-            <element signature="e#15584#15624#0" expanded="true" />
-            <element signature="e#16149#16180#0" expanded="true" />
-            <element signature="e#16538#16620#0" expanded="true" />
-            <element signature="e#16935#16971#0" expanded="true" />
-            <element signature="e#17668#17708#0" expanded="true" />
+            <element signature="e#5173#11403#0" expanded="true" />
+            <element signature="e#6525#9545#0" expanded="true" />
+            <element signature="e#8439#8471#0" expanded="true" />
+            <element signature="e#8583#8615#0" expanded="true" />
+            <element signature="e#9267#9292#0" expanded="true" />
+            <element signature="e#9404#9429#0" expanded="true" />
+            <element signature="e#9544#9545#0" expanded="true" />
+            <element signature="e#9683#9981#0" expanded="true" />
+            <element signature="e#9980#9981#0" expanded="true" />
+            <element signature="e#10029#10326#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
+            <element signature="e#10375#10673#0" expanded="true" />
+            <element signature="e#10672#10673#0" expanded="true" />
+            <element signature="e#10734#11140#0" expanded="true" />
+            <element signature="e#11139#11140#0" expanded="true" />
+            <element signature="e#11402#11403#0" expanded="true" />
+            <element signature="e#11560#11858#0" expanded="true" />
+            <element signature="e#11857#11858#0" expanded="true" />
+            <element signature="e#11899#12706#0" expanded="true" />
+            <element signature="e#12705#12706#0" expanded="true" />
+            <element signature="e#12819#13173#0" expanded="true" />
+            <element signature="e#13172#13173#0" expanded="true" />
+            <element signature="e#14750#14790#0" expanded="true" />
+            <element signature="e#16453#16493#0" expanded="true" />
+            <element signature="e#17018#17049#0" expanded="true" />
+            <element signature="e#17407#17489#0" expanded="true" />
             <element signature="e#17804#17840#0" expanded="true" />
-            <element signature="e#18245#18261#0" expanded="true" />
-            <element signature="e#20585#20875#0" expanded="true" />
-            <element signature="e#20874#20875#0" expanded="true" />
-            <element signature="e#20923#21125#0" expanded="true" />
-            <element signature="e#21124#21125#0" expanded="true" />
-            <element signature="e#24011#24269#0" expanded="true" />
-            <element signature="e#24268#24269#0" expanded="true" />
+            <element signature="e#18537#18577#0" expanded="true" />
+            <element signature="e#18673#18709#0" expanded="true" />
+            <element signature="e#19114#19130#0" expanded="true" />
+            <element signature="e#21229#21465#0" expanded="true" />
+            <element signature="e#21464#21465#0" expanded="true" />
+            <element signature="e#21513#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#25491#27491#0" expanded="true" />
+            <element signature="e#27490#27491#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2241,27 +2249,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-          <folding>
-            <element signature="e#698#725#0" expanded="true" />
-            <element signature="e#1077#1102#0" expanded="true" />
-            <element signature="e#2324#2350#0" expanded="true" />
-            <element signature="e#3550#3571#0" expanded="true" />
-            <element signature="e#3940#3957#0" expanded="true" />
-            <element signature="e#4362#4380#0" expanded="true" />
-            <element signature="e#6280#6298#0" expanded="true" />
-            <element signature="e#6842#6860#0" expanded="true" />
-            <element signature="e#7110#7130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -2288,19 +2275,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="148" column="45" selection-start-line="148" selection-start-column="29" selection-end-line="148" selection-end-column="45" />
-          <folding>
-            <element signature="e#5303#5336#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -2318,10 +2292,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/uhf_readtag_fragment.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="82" column="39" selection-start-line="82" selection-start-column="39" selection-end-line="82" selection-end-column="39" />
+          <folding>
+            <element signature="e#698#725#0" expanded="true" />
+            <element signature="e#1077#1102#0" expanded="true" />
+            <element signature="e#2324#2350#0" expanded="true" />
+            <element signature="e#3550#3571#0" expanded="true" />
+            <element signature="e#3940#3957#0" expanded="true" />
+            <element signature="e#4362#4380#0" expanded="true" />
+            <element signature="e#6280#6298#0" expanded="true" />
+            <element signature="e#6842#6860#0" expanded="true" />
+            <element signature="e#7110#7130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/res/layout/dialog_rfid_information.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="46" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
+          <folding>
+            <element signature="e#5707#5740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="153" column="56" lean-forward="true" selection-start-line="153" selection-start-column="56" selection-end-line="153" selection-end-column="56" />
+        <state relative-caret-position="127">
+          <caret line="114" selection-start-line="114" selection-end-line="114" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1398#1406#0" expanded="true" />
@@ -2339,44 +2347,46 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="666" column="114" lean-forward="true" selection-start-line="666" selection-start-column="114" selection-end-line="666" selection-end-column="114" />
+        <state relative-caret-position="487">
+          <caret line="675" column="59" selection-start-line="675" selection-start-column="59" selection-end-line="675" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4981#11211#0" expanded="true" />
-            <element signature="e#6333#9353#0" expanded="true" />
-            <element signature="e#8247#8279#0" expanded="true" />
-            <element signature="e#8391#8423#0" expanded="true" />
-            <element signature="e#9075#9100#0" expanded="true" />
-            <element signature="e#9212#9237#0" expanded="true" />
-            <element signature="e#9352#9353#0" expanded="true" />
-            <element signature="e#9491#9789#0" expanded="true" />
-            <element signature="e#9788#9789#0" expanded="true" />
-            <element signature="e#9837#10134#0" expanded="true" />
-            <element signature="e#10133#10134#0" expanded="true" />
-            <element signature="e#10183#10481#0" expanded="true" />
-            <element signature="e#10480#10481#0" expanded="true" />
-            <element signature="e#10542#10948#0" expanded="true" />
-            <element signature="e#10947#10948#0" expanded="true" />
-            <element signature="e#11210#11211#0" expanded="true" />
-            <element signature="e#11368#11666#0" expanded="true" />
-            <element signature="e#11665#11666#0" expanded="true" />
-            <element signature="e#11707#12304#0" expanded="true" />
-            <element signature="e#12303#12304#0" expanded="true" />
-            <element signature="e#13881#13921#0" expanded="true" />
-            <element signature="e#15584#15624#0" expanded="true" />
-            <element signature="e#16149#16180#0" expanded="true" />
-            <element signature="e#16538#16620#0" expanded="true" />
-            <element signature="e#16935#16971#0" expanded="true" />
-            <element signature="e#17668#17708#0" expanded="true" />
+            <element signature="e#5173#11403#0" expanded="true" />
+            <element signature="e#6525#9545#0" expanded="true" />
+            <element signature="e#8439#8471#0" expanded="true" />
+            <element signature="e#8583#8615#0" expanded="true" />
+            <element signature="e#9267#9292#0" expanded="true" />
+            <element signature="e#9404#9429#0" expanded="true" />
+            <element signature="e#9544#9545#0" expanded="true" />
+            <element signature="e#9683#9981#0" expanded="true" />
+            <element signature="e#9980#9981#0" expanded="true" />
+            <element signature="e#10029#10326#0" expanded="true" />
+            <element signature="e#10325#10326#0" expanded="true" />
+            <element signature="e#10375#10673#0" expanded="true" />
+            <element signature="e#10672#10673#0" expanded="true" />
+            <element signature="e#10734#11140#0" expanded="true" />
+            <element signature="e#11139#11140#0" expanded="true" />
+            <element signature="e#11402#11403#0" expanded="true" />
+            <element signature="e#11560#11858#0" expanded="true" />
+            <element signature="e#11857#11858#0" expanded="true" />
+            <element signature="e#11899#12706#0" expanded="true" />
+            <element signature="e#12705#12706#0" expanded="true" />
+            <element signature="e#12819#13173#0" expanded="true" />
+            <element signature="e#13172#13173#0" expanded="true" />
+            <element signature="e#14750#14790#0" expanded="true" />
+            <element signature="e#16453#16493#0" expanded="true" />
+            <element signature="e#17018#17049#0" expanded="true" />
+            <element signature="e#17407#17489#0" expanded="true" />
             <element signature="e#17804#17840#0" expanded="true" />
-            <element signature="e#18245#18261#0" expanded="true" />
-            <element signature="e#20585#20875#0" expanded="true" />
-            <element signature="e#20874#20875#0" expanded="true" />
-            <element signature="e#20923#21125#0" expanded="true" />
-            <element signature="e#21124#21125#0" expanded="true" />
-            <element signature="e#24011#24269#0" expanded="true" />
-            <element signature="e#24268#24269#0" expanded="true" />
+            <element signature="e#18537#18577#0" expanded="true" />
+            <element signature="e#18673#18709#0" expanded="true" />
+            <element signature="e#19114#19130#0" expanded="true" />
+            <element signature="e#21229#21465#0" expanded="true" />
+            <element signature="e#21464#21465#0" expanded="true" />
+            <element signature="e#21513#21715#0" expanded="true" />
+            <element signature="e#21714#21715#0" expanded="true" />
+            <element signature="e#25491#27491#0" expanded="true" />
+            <element signature="e#27490#27491#0" expanded="true" />
           </folding>
         </state>
       </provider>

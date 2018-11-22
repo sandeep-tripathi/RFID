@@ -79,7 +79,7 @@ public class RfidInfoContainer {
         if(queue == null)
             queue = Volley.newRequestQueue(ctx); // One time initialization
 
-        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/get", new Response.Listener() {
+        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/gettagdata", new Response.Listener() {
             @Override
             public void onResponse(Object response) {
                 System.out.println("Success Testinggg: " + response.toString());
@@ -110,7 +110,6 @@ public class RfidInfoContainer {
                 String responseString = "";
                 if (response != null) {
                     responseString = String.valueOf(response.statusCode);
-                    System.out.println("dataaa: " + new String(response.data));
 
                     try {
                         JSONObject responseJSON = new JSONObject(new String(response.data));
@@ -138,7 +137,7 @@ public class RfidInfoContainer {
         if(queue == null)
             queue = Volley.newRequestQueue(ctx); // One time initialization
 
-        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/post", new Response.Listener() {
+        StringRequest req = new StringRequest(Request.Method.POST, "http://46.101.232.21:1080/api/app/updatetagdata", new Response.Listener() {
             @Override
             public void onResponse(Object response) {
                 UIHelper.ToastMessage(ctx, "Successfully saved!");
@@ -166,23 +165,7 @@ public class RfidInfoContainer {
 
             @Override
             protected Response<String> parseNetworkResponse(NetworkResponse response) {
-//                String responseString = "";
-//                if (response != null) {
-//                    responseString = String.valueOf(response.statusCode);
-//                    System.out.println("dataaa: " + new String(response.data));
-//
-//                    try {
-//                        JSONObject responseJSON = new JSONObject(new String(response.data));
-//                        JSONObject data = responseJSON.getJSONArray("data").getJSONObject(0);
-//                        RfidInfoMap.put(data.getString("tagid"), new RfidInfo(data));
-//                    } catch (JSONException e) {
-//                        e.printStackTrace();
-//                    } catch (ParseException e) {
-//                        e.printStackTrace();
-//                    }
-//                    // can get more details such as response.headers
-//                }
-                return null;//Response.success(responseString, HttpHeaderParser.parseCacheHeaders(response));
+                return null;
             }
         };
 
@@ -192,5 +175,20 @@ public class RfidInfoContainer {
     public static void flushRfidInfo() {
         RfidInfoMap.clear();
         rfidTagsSubmittedForResponse.clear();
+    }
+
+
+    /**
+     *
+     * @param context
+     * @throws UnsupportedEncodingException
+     */
+    public static void updateEntriesFromBackend(final Context context) throws UnsupportedEncodingException {
+
+        flushRfidInfo();
+
+        for(String key : RfidInfoContainer.RfidInfoMap.keySet()) {
+            updateRfidInfoCache(key, context);
+        }
     }
 }

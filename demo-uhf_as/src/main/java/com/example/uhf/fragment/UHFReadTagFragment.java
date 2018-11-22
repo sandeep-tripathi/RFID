@@ -92,15 +92,14 @@ public class UHFReadTagFragment extends KeyDwonFragment {
     // Our additions to existing attributes
     String username;
     SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
-
+    Button btnRefresh;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Log.i("MY", "UHFReadTagFragment.onCreateView");
 
-        return inflater
-                .inflate(R.layout.uhf_readtag_fragment, container, false);
+        return inflater.inflate(R.layout.uhf_readtag_fragment, container, false);
     }
 
     @Override
@@ -279,6 +278,18 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 else
                     UIHelper.ToastMessage(getActivity().getApplicationContext(), "No relevant information found! \nConsidering registering the tag.");
 
+            }
+        });
+
+        btnRefresh = (Button) getView().findViewById(R.id.btnRefresh);
+        btnRefresh.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    RfidInfoContainer.updateEntriesFromBackend(getActivity().getApplicationContext());
+                } catch (UnsupportedEncodingException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }
@@ -663,8 +674,16 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                             "\"remarks\":\"" + remarks + "\"," +
                             "\"username\":\"" + username + "\"," +
                             "\"nextinspdate\":\"" + next_insp_date + "\"}";
-                    System.out.print(postRequestJSON);
+
                     RfidInfoContainer.submitDataToBackend(postRequestJSON, getActivity().getApplicationContext());
+                    try {
+                        Thread.sleep(1000);
+                        RfidInfoContainer.updateEntriesFromBackend(getActivity().getApplicationContext());
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    } catch (UnsupportedEncodingException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
         });
