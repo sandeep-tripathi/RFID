@@ -28,44 +28,25 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.android.volley.AuthFailureError;
-import com.android.volley.NetworkResponse;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.Response.ErrorListener;
-import com.android.volley.VolleyError;
-import com.android.volley.VolleyLog;
-import com.android.volley.toolbox.HttpHeaderParser;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.uhf.R;
 import com.example.uhf.RFIDcache.RfidInfo;
-import com.example.uhf.RFIDcache.RfidInfoContainer;
+import com.example.uhf.RFIDcache.RfidInfoMediator;
 import com.example.uhf.activity.UHFMainActivity;
 import com.example.uhf.tools.StringUtils;
 import com.example.uhf.tools.UIHelper;
-import com.lidroid.xutils.view.annotation.ViewInject;
-import com.loopj.android.http.AsyncHttpClient;
-import com.loopj.android.http.AsyncHttpResponseHandler;
-import com.loopj.android.http.RequestParams;
 import com.rscja.deviceapi.RFIDWithUHF;
 
-
-import org.json.JSONArray;
-import org.json.JSONObject;
 
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Locale;
-import cz.msebera.android.httpclient.Header;
-import cz.msebera.android.httpclient.entity.StringEntity;
 
 
 public class UHFReadTagFragment extends KeyDwonFragment {
@@ -272,7 +253,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
                 //Toast.makeText(getActivity().getApplicationContext(), "Click ListItem Number " + position + "\n" + tagList.get(position).get("tagUii"), Toast.LENGTH_SHORT).show();
-                RfidInfo infoOfSelectedTagID = RfidInfoContainer.findRfidInfo(tagList.get(position).get("tagUii").replace("EPC:", ""));
+                RfidInfo infoOfSelectedTagID = RfidInfoMediator.findRfidInfo(tagList.get(position).get("tagUii").replace("EPC:", ""));
                 if(infoOfSelectedTagID != null)
                     rfidPopup(infoOfSelectedTagID);
                 else
@@ -286,7 +267,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             @Override
             public void onClick(View v) {
                 try {
-                    RfidInfoContainer.updateEntriesFromBackend(getActivity().getApplicationContext());
+                    RfidInfoMediator.updateEntriesFromBackend(getActivity().getApplicationContext());
                 } catch (UnsupportedEncodingException e) {
                     e.printStackTrace();
                 }
@@ -343,7 +324,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
         @Override
         public void onClick(View v) {
-            RfidInfoContainer.flushRfidInfo(); // Flushing everything fetched from the backend so far.
+            RfidInfoMediator.flushRfidInfo(); // Flushing everything fetched from the backend so far.
             clearData();
 
         }
@@ -431,9 +412,6 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         tv_count.setText("" + adapter.getCount());
 
 
-
-
-
                     } else {
                         UIHelper.ToastMessage(mContext, R.string.uhf_msg_inventory_fail);
 //					mContext.playSound(2);
@@ -451,8 +429,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         new TagThread().start();
                     } else {
                         mContext.mReader.stopInventory();
-                        UIHelper.ToastMessage(mContext,
-                                R.string.uhf_msg_inventory_open_fail);
+                        UIHelper.ToastMessage(mContext, R.string.uhf_msg_inventory_open_fail);
 //					mContext.playSound(2);
                     }
                 }
@@ -481,9 +458,33 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             setViewEnabled(true);
             if (mContext.mReader.stopInventory()) {
                 BtInventory.setText(mContext.getString(R.string.btInventory));
+
+                //tv_count.setText("0");
+
+                //tagList.clear();
+
+                Collections.sort(tagList, new Comparator<HashMap<String, String>>() {
+                    @Override
+                    public int compare(HashMap<String, String> lhs, HashMap<String, String> rhs) {
+                        RfidInfo lhsRfidInfo = RfidInfoMediator.findRfidInfo(lhs.get("tagUii").replace("EPC:", ""));
+                        if(lhsRfidInfo == null) {
+                            lhsRfidInfo = new RfidInfo();
+                            lhsRfidInfo.setNextInspectionDate(new Date(Long.MAX_VALUE));
+                        }
+                        RfidInfo rhsRfidInfo = RfidInfoMediator.findRfidInfo(rhs.get("tagUii").replace("EPC:", ""));
+                        if(rhsRfidInfo == null) {
+                            rhsRfidInfo = new RfidInfo();
+                            rhsRfidInfo.setNextInspectionDate(new Date(Long.MAX_VALUE));
+                        }
+                        return lhsRfidInfo.getNextInspectionDate().compareTo(rhsRfidInfo.getNextInspectionDate());
+                    }
+                });
+
+                Log.i("MY", "tagList.size " + tagList.size());
+
+                adapter.notifyDataSetChanged();
             } else {
-                UIHelper.ToastMessage(mContext,
-                        R.string.uhf_msg_inventory_stop_fail);
+                UIHelper.ToastMessage(mContext, R.string.uhf_msg_inventory_stop_fail);
             }
         }
     }
@@ -534,10 +535,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                     handler.sendMessage(msg);
 
                     try {
-                       RfidInfoContainer.insertRfidInfo(mContext.mReader.convertUiiToEPC(res[1]), getActivity().getApplicationContext());
-
-
-
+                       RfidInfoMediator.insertRfidInfo(mContext.mReader.convertUiiToEPC(res[1]), getActivity().getApplicationContext());
                     } catch (UnsupportedEncodingException e) {
                         e.printStackTrace();
                     }
@@ -675,10 +673,10 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                             "\"username\":\"" + username + "\"," +
                             "\"nextinspdate\":\"" + next_insp_date + "\"}";
 
-                    RfidInfoContainer.submitDataToBackend(postRequestJSON, getActivity().getApplicationContext());
+                    RfidInfoMediator.submitDataToBackend(postRequestJSON, getActivity().getApplicationContext());
                     try {
                         Thread.sleep(1000);
-                        RfidInfoContainer.updateEntriesFromBackend(getActivity().getApplicationContext());
+                        RfidInfoMediator.updateEntriesFromBackend(getActivity().getApplicationContext());
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } catch (UnsupportedEncodingException e) {
