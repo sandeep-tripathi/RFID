@@ -1431,11 +1431,17 @@
 
 
     <string name="equipment_status_prompt">Choose a status</string>
-    <string-array name="equipment_status_arrays">
+    <string-array name="touch_xray_status_array">
         <item>---none---</item>
-        <item>New/Functional</item>
-        <item>Malfunctional</item>
-        <item>Defective</item>
+        <item>OK</item>
+        <item>Mangel</item>
+        <item>Defekt</item>
+    </string-array>
+
+    <string-array name="test_status_array">
+        <item>---none---</item>
+        <item>Pass</item>
+        <item>Failed</item>
     </string-array>
 
 </resources>

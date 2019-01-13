@@ -2,11 +2,18 @@ package com.example.uhf.fragment;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
+import android.os.StrictMode;
+import android.provider.MediaStore;
 import android.text.TextUtils;
+import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,6 +26,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
@@ -38,6 +46,8 @@ import com.example.uhf.tools.UIHelper;
 import com.rscja.deviceapi.RFIDWithUHF;
 
 
+import java.io.File;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -72,8 +82,13 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
     // Our additions to existing attributes
     String username;
-    SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
+    SimpleDateFormat dateFormatter = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault());
     Button btnRefresh;
+
+
+    int TAKE_PHOTO_CODE = 0;
+    public static int count = 0;
+    Bitmap bitmap;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -273,6 +288,10 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 }
             }
         });
+
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy);
     }
 
     @Override
@@ -430,14 +449,13 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                     } else {
                         mContext.mReader.stopInventory();
                         UIHelper.ToastMessage(mContext, R.string.uhf_msg_inventory_open_fail);
-//					mContext.playSound(2);
                     }
                 }
                 break;
                 default:
                     break;
             }
-        } else {// 停止识别
+        } else {
             stopInventory();
         }
     }
@@ -458,10 +476,6 @@ public class UHFReadTagFragment extends KeyDwonFragment {
             setViewEnabled(true);
             if (mContext.mReader.stopInventory()) {
                 BtInventory.setText(mContext.getString(R.string.btInventory));
-
-                //tv_count.setText("0");
-
-                //tagList.clear();
 
                 Collections.sort(tagList, new Comparator<HashMap<String, String>>() {
                     @Override
@@ -566,7 +580,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                         // sign in the user ...
                     }
                 })
-                .setNegativeButton("Discard", new DialogInterface.OnClickListener() {
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialogAlert, int id) {
                         //builder.cancel();
                     }
@@ -581,57 +595,71 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         tagIDfield.setText(rfidInfo.getTagId());
 
         // Setting label from RfidInfo object obtained from the local app-cache
-        final EditText labelField = (EditText) dialog.findViewById(R.id.label);
-        labelField.setText(rfidInfo.getLabelling());
+        //final EditText labelField = (EditText) dialog.findViewById(R.id.label);
+        //labelField.setText(rfidInfo.getLabelling());
 
         // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
         final EditText next_inspection_date = (EditText) dialog.findViewById(R.id.next_inspection_date);
         next_inspection_date.setText(dateFormatter.format(rfidInfo.getNextInspectionDate()));
 
         // Setting next_inspection_date from RfidInfo object obtained from the local app-cache
-        final EditText remarksField = (EditText) dialog.findViewById(R.id.remarks);
+        final EditText remarksField = (EditText) dialog.findViewById(R.id.remark);
         remarksField.setText(rfidInfo.getRemarks());
 
         // Setting username from RfidInfo object obtained from the local app-cache
-        if(username != null) {
+        if (username != null) {
             EditText usernameField = (EditText) dialog.findViewById(R.id.username);
             usernameField.setText(username);
         }
 
         // Setting the value of the current date
         String date_n = dateFormatter.format(new Date());
-        TextView date  = (TextView) dialog.findViewById(R.id.currentDate);
+        TextView date = (TextView) dialog.findViewById(R.id.currentDate);
         date.setText(date_n);
 
 
         // Setting the value of the equipment_status dropdown based on the value in the response received.
-        final Spinner statusDropDown = (Spinner) dialog.findViewById(R.id.equipment_status);
-//        if(rfidInfo.getEquipment_status().equals("new")) {
-//            statusDropDown.setSelection(0);
-//        }
-//        else if(rfidInfo.getEquipment_status().equals("old/usable")) {
-//            statusDropDown.setSelection(1);
-//        }
-//        else if(rfidInfo.getEquipment_status().equals("non-usable")) {
-//            statusDropDown.setSelection(2);
-//        }
-        statusDropDown.setOnItemSelectedListener(new OnItemSelectedListener() {
+        final Spinner touchTest = (Spinner) dialog.findViewById(R.id.touch_test);
+        try {
+            touchTest.setSelection(TouchXrayTestValue.valueOf(rfidInfo.getTouch_test().toUpperCase().replace("-", "")).ordinal());
+        } catch (Exception e) {
+            touchTest.setSelection(0);
+        }
+
+        final Spinner xrayTest = (Spinner) dialog.findViewById(R.id.xray_test);
+        try {
+            xrayTest.setSelection(TouchXrayTestValue.valueOf(rfidInfo.getXray_test().toUpperCase().replace("-", "")).ordinal());
+        } catch (Exception e) {
+            touchTest.setSelection(0);
+        }
+
+        final Spinner testStatus = (Spinner) dialog.findViewById(R.id.test_status);
+        try {
+            testStatus.setSelection(TestStatusValue.valueOf(rfidInfo.getTest_status().toUpperCase()).ordinal());
+        } catch (Exception e) {
+            touchTest.setSelection(0);
+        }
+
+        final EditText commentField = (EditText) dialog.findViewById(R.id.comment);
+        commentField.setText(rfidInfo.getComments());
+
+        touchTest.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(position != 0) {
-                    if(position == 1) {
+                if (position != 0) {
+                    if (position == 1) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
                         cal.add(Calendar.YEAR, 3); // to get previous year add -1
                         Date after3Years = cal.getTime();
                         ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after3Years));
-                    } else if(position == 2) {
+                    } else if (position == 2) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
                         cal.add(Calendar.YEAR, 2); // to get previous year add -1
                         Date after2Years = cal.getTime();
                         ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after2Years));
-                    } else if(position == 3) {
+                    } else if (position == 3) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
                         ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(today));
@@ -655,25 +683,40 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 String tagid = tagIDfield.getText().toString();
                 String remarks = remarksField.getText().toString();
                 String next_insp_date = next_inspection_date.getText().toString();
-                String equipment_status = "";
-                int selectedOption = statusDropDown.getSelectedItemPosition();
-                if(selectedOption == 1)
-                    equipment_status = "functional";
-                else if(selectedOption == 2)
-                    equipment_status = "defective";
-                else if(selectedOption == 3)
-                    equipment_status = "damaged";
 
-                if(username.isEmpty() || equipment_status.isEmpty())
+                String touch_test = "";
+                int selectedTouchTestOption = touchTest.getSelectedItemPosition();
+                touch_test = TouchXrayTestValue.fromInteger(selectedTouchTestOption).toString(); // Subtracting 1 as the touch-test has one extra option called "--none--"
+
+                String xray_test = "";
+                int selectedXrayTestOption = xrayTest.getSelectedItemPosition();
+                xray_test = TouchXrayTestValue.fromInteger(selectedXrayTestOption).toString(); // Subtracting 1 as the xray-test has one extra option called "--none--"
+
+                String test_status = "";
+                int selectedTestStatusOption = testStatus.getSelectedItemPosition();
+                test_status = TestStatusValue.fromInteger(selectedTestStatusOption).toString(); // Subtracting 1 as the status-test has one extra option called "--none--"
+
+                String comments = commentField.getText().toString();
+
+
+                if (username.isEmpty() || touch_test.isEmpty())
                     UIHelper.ToastMessage(getActivity().getApplicationContext(), "Consider entering username and equipment's status!");
+                else if (touch_test.equals("NONE") || xray_test.equals("NONE") || test_status.equals("NONE"))
+                    UIHelper.ToastMessage(getActivity().getApplicationContext(), "Please select appropriate option for all attributes. \n--none-- is not permitted.", 3);
                 else {
                     String postRequestJSON = "{\"tagid\":\"" + tagid + "\"," +
-                            "\"equipment_status\":\"" + equipment_status + "\"," +
-                            "\"remarks\":\"" + remarks + "\"," +
+                            "\"touch_test\":\"" + touch_test + "\"," +
+                            "\"xray_test\":\"" + xray_test + "\"," +
+                            "\"test_status\":\"" + test_status + "\"," +
+                            "\"testremarks\":\"" + remarks + "\"," +
                             "\"username\":\"" + username + "\"," +
+                            "\"comments\":\"" + comments + "\"," +
+
                             "\"nextinspdate\":\"" + next_insp_date + "\"}";
 
-                    RfidInfoMediator.submitDataToBackend(postRequestJSON, getActivity().getApplicationContext());
+
+                    final CheckBox uploadCheckBox = (CheckBox) dialog.findViewById(R.id.uploadCheckBox);
+                    RfidInfoMediator.submitDataToBackend(postRequestJSON, tagid, uploadCheckBox.isChecked(), rfidInfo.getCurrentImageUri().getPath(), getActivity().getApplicationContext());
                     try {
                         Thread.sleep(1000);
                         RfidInfoMediator.updateEntriesFromBackend(getActivity().getApplicationContext());
@@ -685,5 +728,164 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                 }
             }
         });
+
+        final String dir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES) + "/picFolder/";
+        File newdir = new File(dir);
+        newdir.mkdirs();
+
+        Button viewPreviousImage = (Button) dialog.findViewById(R.id.viewPreviousImage);
+        viewPreviousImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bitmap previousImageBitmap = null;
+                if(rfidInfo.getPreviousImage() != null) {
+                    UIHelper.ToastMessage(mContext, "Loading image from previous test...");
+                    previousImageBitmap = rfidInfo.getPreviousImage();
+                } else
+                    UIHelper.ToastMessage(mContext, "No relevant image data was found from previous tests.", 3);
+
+
+                showImageOverlay(previousImageBitmap, null,false);
+
+            }
+        });
+
+        Button viewCurrentImage = (Button) dialog.findViewById(R.id.viewCurrentImage);
+        viewCurrentImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri rfidCurrentImageUri =  rfidInfo.getCurrentImageUri();
+                if(rfidCurrentImageUri != null)
+                    UIHelper.ToastMessage(mContext, "Loading current image...");
+                else
+                    UIHelper.ToastMessage(mContext, "No valid current image is found!", 2);
+
+                showImageOverlay(bitmap, rfidCurrentImageUri, true);
+            }
+        });
+
+
+        Button cameraButton = (Button) dialog.findViewById(R.id.camera);
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UIHelper.ToastMessage(mContext, "Launching camera...\nPlease wait.");
+                count++;
+                String file = dir+count+".jpg";
+                File newfile = new File(file);
+                try {
+                    newfile.createNewFile();
+                }
+                catch (IOException e)
+                {
+                    e.printStackTrace();
+                }
+
+                Uri outputFileUri = Uri.fromFile(newfile);
+                rfidInfo.setCurrentImageUri(outputFileUri);
+
+                Intent cameraIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, outputFileUri);
+
+                startActivityForResult(cameraIntent, TAKE_PHOTO_CODE);
+
+            }
+        });
+
+
+        final CheckBox uploadCheckBox = (CheckBox) dialog.findViewById(R.id.uploadCheckBox);
+        uploadCheckBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(rfidInfo.getCurrentImageUri() != null) {
+                    if (uploadCheckBox.isChecked()) {
+                        UIHelper.ToastMessage(mContext, "Current image shall be submitted.");
+                    } else if (!uploadCheckBox.isChecked()) {
+                        UIHelper.ToastMessage(mContext, "Current image removed from submission.");
+                    }
+                } else {
+                    UIHelper.ToastMessage(mContext, "Please click an image before checking this option.");
+                    uploadCheckBox.setChecked(false);
+                }
+
+            }
+        });
+    }
+
+    void showImageOverlay(Bitmap bitmap, Uri uri, boolean isCurrent) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        // Get the layout inflater
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+
+        // Inflate and set the layout for the dialog
+        // Pass null as the parent view because its going in the dialog layout
+        builder.setView(inflater.inflate(R.layout.image_overlay, null))
+               .setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                   public void onClick(DialogInterface dialogAlert, int id) {
+                       //builder.cancel();
+                   }
+               });
+
+        // 3. Get the AlertDialog
+        final AlertDialog dialog = builder.create();
+        dialog.show();
+
+        TextView imageOverlayText = (TextView) dialog.findViewById(R.id.imageOverlayText);
+
+        if(isCurrent)
+            imageOverlayText.setText("Current image (unsaved)");
+
+
+        ImageView overlayImage = (ImageView) dialog.findViewById(R.id.previousOrCurrentImage);
+        if(bitmap != null) {
+            overlayImage.setImageBitmap(bitmap);
+        } else if(uri != null)
+            overlayImage.setImageURI(uri);
+
+
+        // Attach a PhotoViewAttacher, which takes care of all of the zooming functionality.
+//        PhotoViewAttacher mAttacher = new PhotoViewAttacher(overlayImage);
+//        mAttacher.update()
+
+    }
+}
+
+enum TouchXrayTestValue {
+    NONE,
+    OK,
+    MANGEL,
+    DEFEKT;
+
+    public static TouchXrayTestValue fromInteger(int x) {
+        switch(x) {
+            case 0:
+                return NONE;
+            case 1:
+                return OK;
+            case 2:
+                return MANGEL;
+            case 3:
+                return DEFEKT;
+
+        }
+        return null;
+    }
+}
+
+enum TestStatusValue {
+    NONE,
+    PASSED,
+    FAILED;
+
+    public static TestStatusValue fromInteger(int x) {
+        switch(x) {
+            case 0:
+                return NONE;
+            case 1:
+                return PASSED;
+            case 2:
+                return FAILED;
+        }
+        return null;
     }
 }

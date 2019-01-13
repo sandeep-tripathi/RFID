@@ -51,7 +51,6 @@ array defaulticon
 array defaultname
 array desfire_array_encry
 array desfire_array_hex
-array equipment_status_arrays
 array fileEndingAudio
 array fileEndingImage
 array fileEndingPackage
@@ -60,6 +59,8 @@ array fileEndingWebText
 array i760cls
 array i760icon
 array i760name
+array test_status_array
+array touch_xray_status_array
 attr exampleColor
 attr exampleDimension
 attr exampleDrawable
@@ -240,7 +241,6 @@ id UHF_ver
 id action_kill
 id action_lock
 id action_set
-id apron_Image
 id btSet
 id btnDisable
 id btnFilter
@@ -261,6 +261,7 @@ id btnSetQTParams
 id btnSetSession
 id btnWorkWait
 id btn_deactivate
+id camera
 id cbAccess
 id cbEPC
 id cbEPC_TID
@@ -277,11 +278,11 @@ id cb_filter
 id cb_filter_deact
 id cb_filter_lock
 id cb_filter_wt
+id comment
 id currentDate
 id decode
 id decode_failed
 id decode_succeeded
-id equipment_status
 id etData
 id etData_filter
 id etData_filter_deact
@@ -300,8 +301,9 @@ id etPtr_filter_lock
 id etPtr_filter_wt
 id et_waittime
 id et_worktime
+id imageOverlay
+id imageOverlayText
 id iv_dismissDialog
-id label
 id launch_product_query
 id layout12
 id layout2
@@ -311,6 +313,7 @@ id llContinuous
 id ll_freHop
 id next_inspection_date
 id pager
+id previousOrCurrentImage
 id quit
 id rbEPC
 id rbEPC_filter
@@ -334,7 +337,7 @@ id rb_America
 id rb_Europe
 id rb_Others
 id rb_china
-id remarks
+id remark
 id restart_preview
 id return_scan_result
 id rgFileType
@@ -344,11 +347,17 @@ id spinv
 id splinkParams
 id spsession
 id tagID
+id test_status
+id touch_test
 id tv
 id tv_count
 id tv_normal_set
+id uploadCheckBox
 id username
+id viewCurrentImage
+id viewPreviousImage
 id xrayImage
+id xray_test
 integer num_cols
 layout activity_main
 layout activity_uhfset
@@ -356,6 +365,7 @@ layout dialog_rfid_information
 layout fragment_blank
 layout fragment_deactivate
 layout fragment_main
+layout image_overlay
 layout item_text1
 layout listtag_items
 layout popwindow_filter

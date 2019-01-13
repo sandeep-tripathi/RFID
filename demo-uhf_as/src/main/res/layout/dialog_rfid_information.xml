@@ -25,7 +25,7 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="53dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
@@ -54,7 +54,7 @@
         >
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="54dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
@@ -119,25 +119,42 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
-            android:text="Label:"
-            android:textSize="16sp"/>
+            android:text="Touch Test"
+            android:textSize="16sp" />
 
-        <EditText
-            android:id="@+id/label"
+        <Spinner
+            android:id="@+id/touch_test"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="4dp"
-            android:layout_marginTop="4dp"
-            android:layout_marginRight="4dp"
-            android:layout_marginBottom="4dp"
-            android:clickable="false"
-            android:cursorVisible="false"
-            android:fontFamily="sans-serif"
-            android:hint="1"
-            android:inputType="textEmailAddress"
+            android:entries="@array/touch_xray_status_array"
             android:paddingLeft="17dp"
-            android:paddingTop="5dp"
-            android:textColor="@color/listitem_black" />
+            android:paddingTop="10dp"
+            android:prompt="@string/equipment_status_prompt" />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
+            android:text="Xray Test"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/xray_test"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/touch_xray_status_array"
+            android:paddingLeft="17dp"
+            android:paddingTop="10dp"
+            android:prompt="@string/equipment_status_prompt" />
+
 
     </LinearLayout>
     <LinearLayout
@@ -150,14 +167,14 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
-            android:text="Status of Equipment:"
-            android:textSize="16sp"/>
+            android:text="Test Status"
+            android:textSize="16sp" />
 
         <Spinner
-            android:id="@+id/equipment_status"
+            android:id="@+id/test_status"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:entries="@array/equipment_status_arrays"
+            android:entries="@array/test_status_array"
             android:paddingLeft="17dp"
             android:paddingTop="10dp"
             android:prompt="@string/equipment_status_prompt" />
@@ -175,7 +192,7 @@
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
             android:text="Next Inspection:"
-            android:textSize="16sp"/>
+            android:textSize="16sp" />
 
         <EditText
             android:id="@+id/next_inspection_date"
@@ -195,16 +212,42 @@
         >
 
         <TextView
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="5dp"
+            android:text="Remark:"
+            android:textSize="16sp" />
+
+        <EditText
+
+            android:id="@+id/remark"
+            android:layout_width="332dp"
+            android:layout_height="59dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="3dp"
+            android:ems="10"
+            android:hint="Enter your remarks"
+            android:inputType="textPersonName" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
             android:paddingLeft="5dp"
-            android:text="Remarks:"
+            android:text="Comment:"
             android:textSize="16sp"/>
 
         <EditText
 
-            android:id="@+id/remarks"
+            android:id="@+id/comment"
             android:layout_width="332dp"
             android:layout_height="59dp"
             android:layout_alignParentTop="true"
@@ -216,12 +259,52 @@
             android:inputType="textPersonName" />
     </LinearLayout>
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/apron_Image"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:clickable="false"
-        android:src="@drawable/crackapron" />
+        android:src="@drawable/crackapron" />-->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        >
+
+        <Button
+            android:id="@+id/viewPreviousImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Previous"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:textSize="10sp" />
+
+        <Button
+            android:id="@+id/viewCurrentImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current"
+            android:textSize="10sp" />
+
+        <CheckBox
+            android:id="@+id/uploadCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Upload current"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

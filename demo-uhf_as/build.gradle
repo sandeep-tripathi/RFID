@@ -31,17 +31,19 @@ buildscript {
 allprojects {
     repositories {
         maven { url 'http://repo1.maven.org/maven2' }
+        maven { url "https://jitpack.io" }
         google()
         jcenter()
     }
 }
 dependencies {
     compile files('libs/xUtils-2.5.5.jar')
-    compile 'com.android.support:support-v4:18.0.0'
+    compile 'com.android.support:support-v4:23.0.0'
     compile files('libs/jxl.jar')
     compile files('libs/cw-deviceapi20180918.jar')
     compile 'com.loopj.android:android-async-http:1.4.9'
     compile 'com.android.volley:volley:1.1.1'
 
+   // implementation 'com.github.chrisbanes:PhotoView:latest.release.here'
 
 }
