@@ -664,7 +664,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
                     } else if (position == 3) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
-                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(/*dateFormatter.format(today)*/"NA");
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(today));
                     }
                 }
             }

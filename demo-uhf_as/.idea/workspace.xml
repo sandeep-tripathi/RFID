@@ -36,7 +36,7 @@
       <file leaf-file-name="VolleyMultipartRequest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/VolleyMultipartRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
+            <state relative-caret-position="15">
               <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
             </state>
           </provider>
@@ -46,7 +46,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoMediator.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="15">
-              <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+              <caret line="98" column="60" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -54,7 +54,7 @@
       <file leaf-file-name="RfidInfo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="18">
               <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
             </state>
           </provider>
@@ -63,7 +63,7 @@
       <file leaf-file-name="BaseTabFragmentActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/activity/BaseTabFragmentActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
+            <state relative-caret-position="93">
               <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
               <folding>
                 <element signature="e#1766#1767#0" expanded="true" />
@@ -76,8 +76,8 @@
       <file leaf-file-name="UHFSetFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFSetFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+            <state relative-caret-position="45">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -85,57 +85,21 @@
       <file leaf-file-name="UHFReadTagFragment.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="650" selection-start-line="650" selection-end-line="650" />
+            <state relative-caret-position="273">
+              <caret line="666" column="92" selection-start-line="666" selection-start-column="92" selection-end-line="666" selection-end-column="92" />
               <folding>
-                <element signature="e#4751#10981#0" expanded="true" />
-                <element signature="e#6103#9123#0" expanded="true" />
-                <element signature="e#8017#8049#0" expanded="true" />
-                <element signature="e#8161#8193#0" expanded="true" />
-                <element signature="e#8845#8870#0" expanded="true" />
-                <element signature="e#8982#9007#0" expanded="true" />
-                <element signature="e#9122#9123#0" expanded="true" />
-                <element signature="e#9261#9559#0" expanded="true" />
-                <element signature="e#9558#9559#0" expanded="true" />
-                <element signature="e#9607#9904#0" expanded="true" />
-                <element signature="e#9903#9904#0" expanded="true" />
-                <element signature="e#9953#10251#0" expanded="true" />
-                <element signature="e#10250#10251#0" expanded="true" />
-                <element signature="e#10312#10718#0" expanded="true" />
-                <element signature="e#10717#10718#0" expanded="true" />
-                <element signature="e#10980#10981#0" expanded="true" />
-                <element signature="e#11138#11436#0" expanded="true" />
-                <element signature="e#11435#11436#0" expanded="true" />
-                <element signature="e#11477#12283#0" expanded="true" />
-                <element signature="e#12282#12283#0" expanded="true" />
-                <element signature="e#12396#12749#0" expanded="true" />
-                <element signature="e#12748#12749#0" expanded="true" />
-                <element signature="e#14472#14512#0" expanded="true" />
-                <element signature="e#16175#16215#0" expanded="true" />
-                <element signature="e#16737#16768#0" expanded="true" />
-                <element signature="e#17126#17208#0" expanded="true" />
-                <element signature="e#17491#17527#0" expanded="true" />
-                <element signature="e#18187#18227#0" expanded="true" />
-                <element signature="e#18273#19280#0" expanded="true" />
-                <element signature="e#19279#19280#0" expanded="true" />
-                <element signature="e#19465#19501#0" expanded="true" />
-                <element signature="e#19906#19922#0" expanded="true" />
-                <element signature="e#22017#22253#0" expanded="true" />
-                <element signature="e#22252#22253#0" expanded="true" />
-                <element signature="e#22300#22502#0" expanded="true" />
-                <element signature="e#22501#22502#0" expanded="true" />
-                <element signature="e#26941#30121#0" expanded="true" />
-                <element signature="e#30120#30121#0" expanded="true" />
-                <element signature="e#30444#31038#0" expanded="true" />
-                <element signature="e#31037#31038#0" expanded="true" />
-                <element signature="e#31173#31675#0" expanded="true" />
-                <element signature="e#31674#31675#0" expanded="true" />
-                <element signature="e#31793#32671#0" expanded="true" />
-                <element signature="e#32670#32671#0" expanded="true" />
-                <element signature="e#32811#33523#0" expanded="true" />
-                <element signature="e#33522#33523#0" expanded="true" />
-                <element signature="e#34034#34232#0" expanded="true" />
-                <element signature="e#34231#34232#0" expanded="true" />
+                <element signature="e#26933#30113#0" expanded="true" />
+                <element signature="e#30112#30113#0" expanded="true" />
+                <element signature="e#30436#31030#0" expanded="true" />
+                <element signature="e#31029#31030#0" expanded="true" />
+                <element signature="e#31165#31667#0" expanded="true" />
+                <element signature="e#31666#31667#0" expanded="true" />
+                <element signature="e#31785#32663#0" expanded="true" />
+                <element signature="e#32662#32663#0" expanded="true" />
+                <element signature="e#32803#33515#0" expanded="true" />
+                <element signature="e#33514#33515#0" expanded="true" />
+                <element signature="e#34026#34224#0" expanded="true" />
+                <element signature="e#34223#34224#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -144,7 +108,7 @@
       <file leaf-file-name="AdapterView.class" pinned="false" current-in-tab="false">
         <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-19/android.jar!/android/widget/AdapterView.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1035">
+            <state relative-caret-position="2295">
               <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
             </state>
           </provider>
@@ -165,6 +129,8 @@
     <findStrings>
       <find>mode</find>
       <find>strictmode</find>
+      <find>submit</find>
+      <find>consider</find>
     </findStrings>
   </component>
   <component name="GradleLocalSettings">
@@ -1592,8 +1558,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info anchor="bottom" id="Android Profiler" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info id="simpleUML" order="2" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
@@ -1604,13 +1571,13 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Sequence" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3283582" />
       <window_info anchor="bottom" id="Logcat" order="7" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.1530303" />
-      <window_info anchor="bottom" id="Build" order="7" weight="0.17412935" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.17412935" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
@@ -1631,10 +1598,84 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/VolleyMultipartRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoMediator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3315">
+          <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/activity/BaseTabFragmentActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3360">
+          <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
+          <folding>
+            <element signature="e#1766#1767#0" expanded="true" />
+            <element signature="e#1807#1808#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFSetFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-19/android.jar!/android/widget/AdapterView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3165">
+          <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/activity/UHFMainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9750">
+          <caret line="650" selection-start-line="650" selection-end-line="650" />
+          <folding>
+            <element signature="e#26933#30113#0" expanded="true" />
+            <element signature="e#30112#30113#0" expanded="true" />
+            <element signature="e#30436#31030#0" expanded="true" />
+            <element signature="e#31029#31030#0" expanded="true" />
+            <element signature="e#31165#31667#0" expanded="true" />
+            <element signature="e#31666#31667#0" expanded="true" />
+            <element signature="e#31785#32663#0" expanded="true" />
+            <element signature="e#32662#32663#0" expanded="true" />
+            <element signature="e#32803#33515#0" expanded="true" />
+            <element signature="e#33514#33515#0" expanded="true" />
+            <element signature="e#34026#34224#0" expanded="true" />
+            <element signature="e#34223#34224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/VolleyMultipartRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1686,54 +1727,18 @@
         <state relative-caret-position="8850">
           <caret line="650" selection-start-line="650" selection-end-line="650" />
           <folding>
-            <element signature="e#4751#10981#0" expanded="true" />
-            <element signature="e#6103#9123#0" expanded="true" />
-            <element signature="e#8017#8049#0" expanded="true" />
-            <element signature="e#8161#8193#0" expanded="true" />
-            <element signature="e#8845#8870#0" expanded="true" />
-            <element signature="e#8982#9007#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9261#9559#0" expanded="true" />
-            <element signature="e#9558#9559#0" expanded="true" />
-            <element signature="e#9607#9904#0" expanded="true" />
-            <element signature="e#9903#9904#0" expanded="true" />
-            <element signature="e#9953#10251#0" expanded="true" />
-            <element signature="e#10250#10251#0" expanded="true" />
-            <element signature="e#10312#10718#0" expanded="true" />
-            <element signature="e#10717#10718#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11138#11436#0" expanded="true" />
-            <element signature="e#11435#11436#0" expanded="true" />
-            <element signature="e#11477#12283#0" expanded="true" />
-            <element signature="e#12282#12283#0" expanded="true" />
-            <element signature="e#12396#12749#0" expanded="true" />
-            <element signature="e#12748#12749#0" expanded="true" />
-            <element signature="e#14472#14512#0" expanded="true" />
-            <element signature="e#16175#16215#0" expanded="true" />
-            <element signature="e#16737#16768#0" expanded="true" />
-            <element signature="e#17126#17208#0" expanded="true" />
-            <element signature="e#17491#17527#0" expanded="true" />
-            <element signature="e#18187#18227#0" expanded="true" />
-            <element signature="e#18273#19280#0" expanded="true" />
-            <element signature="e#19279#19280#0" expanded="true" />
-            <element signature="e#19465#19501#0" expanded="true" />
-            <element signature="e#19906#19922#0" expanded="true" />
-            <element signature="e#22017#22253#0" expanded="true" />
-            <element signature="e#22252#22253#0" expanded="true" />
-            <element signature="e#22300#22502#0" expanded="true" />
-            <element signature="e#22501#22502#0" expanded="true" />
-            <element signature="e#26941#30121#0" expanded="true" />
-            <element signature="e#30120#30121#0" expanded="true" />
-            <element signature="e#30444#31038#0" expanded="true" />
-            <element signature="e#31037#31038#0" expanded="true" />
-            <element signature="e#31173#31675#0" expanded="true" />
-            <element signature="e#31674#31675#0" expanded="true" />
-            <element signature="e#31793#32671#0" expanded="true" />
-            <element signature="e#32670#32671#0" expanded="true" />
-            <element signature="e#32811#33523#0" expanded="true" />
-            <element signature="e#33522#33523#0" expanded="true" />
-            <element signature="e#34034#34232#0" expanded="true" />
-            <element signature="e#34231#34232#0" expanded="true" />
+            <element signature="e#26933#30113#0" expanded="true" />
+            <element signature="e#30112#30113#0" expanded="true" />
+            <element signature="e#30436#31030#0" expanded="true" />
+            <element signature="e#31029#31030#0" expanded="true" />
+            <element signature="e#31165#31667#0" expanded="true" />
+            <element signature="e#31666#31667#0" expanded="true" />
+            <element signature="e#31785#32663#0" expanded="true" />
+            <element signature="e#32662#32663#0" expanded="true" />
+            <element signature="e#32803#33515#0" expanded="true" />
+            <element signature="e#33514#33515#0" expanded="true" />
+            <element signature="e#34026#34224#0" expanded="true" />
+            <element signature="e#34223#34224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1775,54 +1780,18 @@
         <state relative-caret-position="4395">
           <caret line="293" column="1" selection-start-line="293" selection-end-line="293" selection-end-column="1" />
           <folding>
-            <element signature="e#4751#10981#0" expanded="true" />
-            <element signature="e#6103#9123#0" expanded="true" />
-            <element signature="e#8017#8049#0" expanded="true" />
-            <element signature="e#8161#8193#0" expanded="true" />
-            <element signature="e#8845#8870#0" expanded="true" />
-            <element signature="e#8982#9007#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9261#9559#0" expanded="true" />
-            <element signature="e#9558#9559#0" expanded="true" />
-            <element signature="e#9607#9904#0" expanded="true" />
-            <element signature="e#9903#9904#0" expanded="true" />
-            <element signature="e#9953#10251#0" expanded="true" />
-            <element signature="e#10250#10251#0" expanded="true" />
-            <element signature="e#10312#10718#0" expanded="true" />
-            <element signature="e#10717#10718#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11138#11436#0" expanded="true" />
-            <element signature="e#11435#11436#0" expanded="true" />
-            <element signature="e#11477#12283#0" expanded="true" />
-            <element signature="e#12282#12283#0" expanded="true" />
-            <element signature="e#12396#12749#0" expanded="true" />
-            <element signature="e#12748#12749#0" expanded="true" />
-            <element signature="e#14472#14512#0" expanded="true" />
-            <element signature="e#16175#16215#0" expanded="true" />
-            <element signature="e#16737#16768#0" expanded="true" />
-            <element signature="e#17126#17208#0" expanded="true" />
-            <element signature="e#17491#17527#0" expanded="true" />
-            <element signature="e#18187#18227#0" expanded="true" />
-            <element signature="e#18273#19280#0" expanded="true" />
-            <element signature="e#19279#19280#0" expanded="true" />
-            <element signature="e#19465#19501#0" expanded="true" />
-            <element signature="e#19906#19922#0" expanded="true" />
-            <element signature="e#22017#22253#0" expanded="true" />
-            <element signature="e#22252#22253#0" expanded="true" />
-            <element signature="e#22300#22502#0" expanded="true" />
-            <element signature="e#22501#22502#0" expanded="true" />
-            <element signature="e#26941#30121#0" expanded="true" />
-            <element signature="e#30120#30121#0" expanded="true" />
-            <element signature="e#30444#31038#0" expanded="true" />
-            <element signature="e#31037#31038#0" expanded="true" />
-            <element signature="e#31173#31675#0" expanded="true" />
-            <element signature="e#31674#31675#0" expanded="true" />
-            <element signature="e#31793#32671#0" expanded="true" />
-            <element signature="e#32670#32671#0" expanded="true" />
-            <element signature="e#32811#33523#0" expanded="true" />
-            <element signature="e#33522#33523#0" expanded="true" />
-            <element signature="e#34034#34232#0" expanded="true" />
-            <element signature="e#34231#34232#0" expanded="true" />
+            <element signature="e#26933#30113#0" expanded="true" />
+            <element signature="e#30112#30113#0" expanded="true" />
+            <element signature="e#30436#31030#0" expanded="true" />
+            <element signature="e#31029#31030#0" expanded="true" />
+            <element signature="e#31165#31667#0" expanded="true" />
+            <element signature="e#31666#31667#0" expanded="true" />
+            <element signature="e#31785#32663#0" expanded="true" />
+            <element signature="e#32662#32663#0" expanded="true" />
+            <element signature="e#32803#33515#0" expanded="true" />
+            <element signature="e#33514#33515#0" expanded="true" />
+            <element signature="e#34026#34224#0" expanded="true" />
+            <element signature="e#34223#34224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1894,37 +1863,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/VolleyMultipartRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Android/Sdk/platforms/android-19/android.jar!/android/widget/AdapterView.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
+        <state relative-caret-position="2295">
           <caret line="211" column="13" selection-start-line="211" selection-start-column="13" selection-end-line="211" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/VolleyMultipartRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="15">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfoMediator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
-          <caret line="221" column="56" selection-start-line="221" selection-start-column="56" selection-end-line="221" selection-end-column="56" />
+          <caret line="98" column="60" selection-start-line="98" selection-start-column="60" selection-end-line="98" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/RFIDcache/RfidInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/activity/BaseTabFragmentActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
+        <state relative-caret-position="93">
           <caret line="262" column="13" selection-start-line="262" selection-start-column="13" selection-end-line="262" selection-end-column="13" />
           <folding>
             <element signature="e#1766#1767#0" expanded="true" />
@@ -1935,64 +1904,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFSetFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="40" column="13" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="13" />
+        <state relative-caret-position="45">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/example/uhf/fragment/UHFReadTagFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="650" selection-start-line="650" selection-end-line="650" />
+        <state relative-caret-position="273">
+          <caret line="666" column="92" selection-start-line="666" selection-start-column="92" selection-end-line="666" selection-end-column="92" />
           <folding>
-            <element signature="e#4751#10981#0" expanded="true" />
-            <element signature="e#6103#9123#0" expanded="true" />
-            <element signature="e#8017#8049#0" expanded="true" />
-            <element signature="e#8161#8193#0" expanded="true" />
-            <element signature="e#8845#8870#0" expanded="true" />
-            <element signature="e#8982#9007#0" expanded="true" />
-            <element signature="e#9122#9123#0" expanded="true" />
-            <element signature="e#9261#9559#0" expanded="true" />
-            <element signature="e#9558#9559#0" expanded="true" />
-            <element signature="e#9607#9904#0" expanded="true" />
-            <element signature="e#9903#9904#0" expanded="true" />
-            <element signature="e#9953#10251#0" expanded="true" />
-            <element signature="e#10250#10251#0" expanded="true" />
-            <element signature="e#10312#10718#0" expanded="true" />
-            <element signature="e#10717#10718#0" expanded="true" />
-            <element signature="e#10980#10981#0" expanded="true" />
-            <element signature="e#11138#11436#0" expanded="true" />
-            <element signature="e#11435#11436#0" expanded="true" />
-            <element signature="e#11477#12283#0" expanded="true" />
-            <element signature="e#12282#12283#0" expanded="true" />
-            <element signature="e#12396#12749#0" expanded="true" />
-            <element signature="e#12748#12749#0" expanded="true" />
-            <element signature="e#14472#14512#0" expanded="true" />
-            <element signature="e#16175#16215#0" expanded="true" />
-            <element signature="e#16737#16768#0" expanded="true" />
-            <element signature="e#17126#17208#0" expanded="true" />
-            <element signature="e#17491#17527#0" expanded="true" />
-            <element signature="e#18187#18227#0" expanded="true" />
-            <element signature="e#18273#19280#0" expanded="true" />
-            <element signature="e#19279#19280#0" expanded="true" />
-            <element signature="e#19465#19501#0" expanded="true" />
-            <element signature="e#19906#19922#0" expanded="true" />
-            <element signature="e#22017#22253#0" expanded="true" />
-            <element signature="e#22252#22253#0" expanded="true" />
-            <element signature="e#22300#22502#0" expanded="true" />
-            <element signature="e#22501#22502#0" expanded="true" />
-            <element signature="e#26941#30121#0" expanded="true" />
-            <element signature="e#30120#30121#0" expanded="true" />
-            <element signature="e#30444#31038#0" expanded="true" />
-            <element signature="e#31037#31038#0" expanded="true" />
-            <element signature="e#31173#31675#0" expanded="true" />
-            <element signature="e#31674#31675#0" expanded="true" />
-            <element signature="e#31793#32671#0" expanded="true" />
-            <element signature="e#32670#32671#0" expanded="true" />
-            <element signature="e#32811#33523#0" expanded="true" />
-            <element signature="e#33522#33523#0" expanded="true" />
-            <element signature="e#34034#34232#0" expanded="true" />
-            <element signature="e#34231#34232#0" expanded="true" />
+            <element signature="e#26933#30113#0" expanded="true" />
+            <element signature="e#30112#30113#0" expanded="true" />
+            <element signature="e#30436#31030#0" expanded="true" />
+            <element signature="e#31029#31030#0" expanded="true" />
+            <element signature="e#31165#31667#0" expanded="true" />
+            <element signature="e#31666#31667#0" expanded="true" />
+            <element signature="e#31785#32663#0" expanded="true" />
+            <element signature="e#32662#32663#0" expanded="true" />
+            <element signature="e#32803#33515#0" expanded="true" />
+            <element signature="e#33514#33515#0" expanded="true" />
+            <element signature="e#34026#34224#0" expanded="true" />
+            <element signature="e#34223#34224#0" expanded="true" />
           </folding>
         </state>
       </provider>
