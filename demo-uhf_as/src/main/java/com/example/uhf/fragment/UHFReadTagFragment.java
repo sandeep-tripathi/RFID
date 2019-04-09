@@ -292,6 +292,7 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
+
     }
 
     @Override
@@ -643,26 +644,27 @@ public class UHFReadTagFragment extends KeyDwonFragment {
         final EditText commentField = (EditText) dialog.findViewById(R.id.comment);
         commentField.setText(rfidInfo.getComments());
 
-        touchTest.setOnItemSelectedListener(new OnItemSelectedListener() {
+        final Spinner xray_test = (Spinner) dialog.findViewById(R.id.xray_test);
+        xray_test.setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position != 0) {
                     if (position == 1) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
-                        cal.add(Calendar.YEAR, 3); // to get previous year add -1
-                        Date after3Years = cal.getTime();
-                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after3Years));
-                    } else if (position == 2) {
-                        Calendar cal = Calendar.getInstance();
-                        Date today = cal.getTime();
                         cal.add(Calendar.YEAR, 2); // to get previous year add -1
                         Date after2Years = cal.getTime();
                         ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after2Years));
+                    } else if (position == 2) {
+                        Calendar cal = Calendar.getInstance();
+                        Date today = cal.getTime();
+                        cal.add(Calendar.YEAR, 1); // to get previous year add -1
+                        Date after1Year = cal.getTime();
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(after1Year));
                     } else if (position == 3) {
                         Calendar cal = Calendar.getInstance();
                         Date today = cal.getTime();
-                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(dateFormatter.format(today));
+                        ((EditText) dialog.findViewById(R.id.next_inspection_date)).setText(/*dateFormatter.format(today)*/"NA");
                     }
                 }
             }
@@ -672,6 +674,8 @@ public class UHFReadTagFragment extends KeyDwonFragment {
 
             }
         });
+
+
 
         Button theButton = dialog.getButton(DialogInterface.BUTTON_POSITIVE);
         theButton.setOnClickListener(new View.OnClickListener() {

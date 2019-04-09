@@ -1,0 +1,4 @@
+#Sat Feb 02 22:14:23 GMT 2019
+base.0=/home/panda/Desktop/RFID-UHF-APP/demo-uhf_as/build/intermediates/transforms/dexMerger/debug/2
+path.0=classes.dex
+renamed.0=classes.dex
